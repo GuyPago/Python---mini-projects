@@ -1,11 +1,30 @@
 greet = "Hello, "
-name = "Guy. "
-greetName = greet+name
-print(greetName*3)
+name = "Yulia. "
+greetName = greet + name
+# Adds a line break ("\n") || Prints x times (*x)
+print((greetName + "\n") * 2)
+
+story = name[0:-2] + """ Has quite an interesting story,
+She was just about to share it but \
+Unfortunately, she turned into a frog. \n"""
+#  Makes every natural lineBreak work | ("""x""") || Prevent a br by using (\)
+print(story)
+
+firstLetter = name[0]  # Gets the x letter of the string. | [x]
+first3letters = greet[0:4]  # Stores the x to y letters of the string. | [x:y]
+#  Using [-x,-y] counts [x,y] letters from the end.
+print("Your name's first letter is: " + firstLetter)
+print("Hitler is in " + first3letters)
+
 num = 25
 favoriteNumber = "Your favorite number is: "
-print(favoriteNumber+str(num))  # Turns variable to string. (str)
-print(len(favoriteNumber))  # prints the length of the string. (len)
+print(favoriteNumber + str(num))  # Turns a variable to string. | (str)
+print(len(favoriteNumber))  # prints the length of the string. | (len)
 
-firstLetter = name[0]  # Gets the x letter of the string. [x]
-print("Your name's first letter is: " + firstLetter)
+test = "It is a test."
+test = test.replace("is", "was")  # Replaces x with y | var.replace(x, y)
+print(test)
+
+count = 1
+while True:
+    count
