@@ -1,12 +1,12 @@
 greet = "Hello, "  # var | x = "y"
-name = "Yulia. "
-greetName = greet + name
+name = input("What's Your name? ")
+greetName = greet + name + ". "
 # Adds a line break ("\n") || Prints x times (*x)
-print((greetName + "\n") * 2**10)
+print((greetName + "\n") * 2)
 
-story = name[0:-2] + """ Has quite an interesting story,
-She was just about to share it but \
-Unfortunately, she turned into a frog. \n"""
+story = name + """ Has quite an interesting story,
+He was just about to share it but \
+suddenly, He turned into a frog. \n"""
 #  Makes every natural lineBreak work | ("""x""") || Prevent a br by using (\)
 print(story)
 
@@ -22,12 +22,12 @@ print(favoriteNumber + str(num))  # Turns a variable to string. | (str)
 print(len(favoriteNumber))  # prints the length of the string. | (len)
 
 test = "It is a test."
-test = test.replace("is", "was")  # Replaces x with y | var.replace(x, y)
+test = test.replace("is", "was")  # Replaces x with y | 'var'.replace("x", "y")
 print(test)
 
 count = 1
-while False:
-    count = count*2
+while count < 10:  # While loop | while 'condition':
+    count = count + 1
     print(count)
 
 sidraHeshbonit = list(range(0, 1000, 9))  # Arithmetic progression. | list(range(a0, an, d))

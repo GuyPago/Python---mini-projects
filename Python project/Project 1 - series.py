@@ -8,8 +8,8 @@ n = int(input("Please enter 'n': "))
 
 an = a1 + (n-1)*d
 Sn = (n/2)*(2*a1 + (n-1)*d)
-Math(r'a_n~=~a_1+(n-1)d')  # 'an' Algebric display
-Math(r'S_n ~=~ \frac{n}{2} [2a_1+(n-1)d]')  # 'Sn' Algebric display
+Math(r'a_n~=~a_1+(n-1)d')  # 'an' function Algebric display
+Math(r'S_n ~=~ \frac{n}{2} [2a_1+(n-1)d]')  # 'Sn' function Algebric display
 
 print("a"+str(n)+" = " + str(an))  # Prints 'an'
 print("s"+str(n)+" = " + str(Sn))  # Prints 'Sn'
