@@ -1,8 +1,8 @@
-greet = "Hello, "
+greet = "Hello, "  # var | x = "y"
 name = "Yulia. "
 greetName = greet + name
 # Adds a line break ("\n") || Prints x times (*x)
-print((greetName + "\n") * 2)
+print((greetName + "\n") * 2**10)
 
 story = name[0:-2] + """ Has quite an interesting story,
 She was just about to share it but \
