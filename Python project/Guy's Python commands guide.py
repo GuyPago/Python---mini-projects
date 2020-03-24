@@ -1,8 +1,7 @@
 greet = "Hello, "  # var | x = "y"
-name = input("What's Your name? ")
+name = input("What's Your name? ")  # var gets input from user. | input("ask user")
 greetName = greet + name + ". "
-# Adds a line break ("\n") || Prints x times (*x)
-print((greetName + "\n") * 2)
+print((greetName + "\n") * 2)  # Adds a line break ("\n") || Prints x times (*x)
 
 story = name + """ Has quite an interesting story,
 He was just about to share it but \
@@ -25,7 +24,24 @@ test = "It is a test."
 test = test.replace("is", "was")  # Replaces x with y | 'var'.replace("x", "y")
 print(test)
 
-count = 1
+print("Lets count to 10 :")
+count = 0
 while count < 10:  # While loop | while 'condition':
     count = count + 1
     print(count)
+
+
+# Functions
+
+def welcomeUser(name):  # defines a function | def 'funcName'(parameter)
+    print("Welcome, " + name + "!")
+welcomeUser("Betanir")  # call function + parameter
+
+
+def toFahrenheit(celsius):
+    f = celsius * 9/5 + 32
+    return f  # returns a value | return 'value'
+
+degreesInput = input("Enter celsius degrees: ")
+degrees = toFahrenheit(int(degreesInput))
+print(degreesInput + " degrees celsius are " + str(degrees) + " degrees Fahrenheit")
