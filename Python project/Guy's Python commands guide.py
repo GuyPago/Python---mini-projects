@@ -10,10 +10,10 @@ suddenly, He turned into a frog. \n"""
 print(story)
 
 firstLetter = name[0]  # Gets the x letter of the string. | [x]
-first3letters = greet[0:4]  # Stores the x to y letters of the string. | [x:y]
+firstLetters = greet[0:4]  # Stores the x to y letters of the string. | [x:y]
 #  Using [-x,-y] counts [x,y] letters from the end.
 print("Your name's first letter is: " + firstLetter)
-print("Hitler is in " + first3letters)
+print("Hitler is in " + firstLetters)
 
 num = 25
 favoriteNumber = "Your favorite number is: "
