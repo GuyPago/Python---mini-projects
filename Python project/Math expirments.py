@@ -7,3 +7,6 @@ count = 1
 while count < 1000:
     count = count*2
     print(count)
+
+sidraHeshbonit = list(range(0, 1000, 9))  # Arithmetic progression. | list(range(a0, an, d))
+print(sidraHeshbonit[3])  # prints "a3".

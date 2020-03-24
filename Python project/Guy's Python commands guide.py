@@ -29,6 +29,3 @@ count = 1
 while count < 10:  # While loop | while 'condition':
     count = count + 1
     print(count)
-
-sidraHeshbonit = list(range(0, 1000, 9))  # Arithmetic progression. | list(range(a0, an, d))
-print(sidraHeshbonit[3])  # prints "a3".
