@@ -26,5 +26,9 @@ test = test.replace("is", "was")  # Replaces x with y | var.replace(x, y)
 print(test)
 
 count = 1
-while True:
-    count
+while False:
+    count = count*2
+    print(count)
+
+sidraHeshbonit = list(range(0, 1000, 9))  # Arithmetic progression. | list(range(a0, an, d))
+print(sidraHeshbonit[3])  # prints "a3".
