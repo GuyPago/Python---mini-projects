@@ -18,10 +18,7 @@ if x2 == x2.real:
         x2 = int(x2)
 
 if x1 == x2:
-    print("\nx = " + str(x1))
-
-if type(x1) == complex and type(x2) == complex:
-    x1 = str(x1).replace("j", "i")
-    x2 = str(x2).replace("j", "i")
-
-    print("\nAnswers are:\n" + "x1 = " + str(x1) + "\n" + "x2 = " + str(x2))
+    print("\nAnswer is:\n" + "x = " + str(x1))
+else:
+    print("\nAnswers are:\n" + "x1 = " + str(x1).replace("j", "i") + "\n"
+          + "x2 = " + str(x2).replace("j", "i"))

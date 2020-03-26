@@ -21,5 +21,4 @@ if x1 == x2:
     print("\nx = " + str(x1))
 
 
-
 print("\nAnswers are:\n" + "x1 = " + str(x1) + "\n" + "x2 = " + str(x2))
