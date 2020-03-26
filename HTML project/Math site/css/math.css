@@ -135,3 +135,7 @@ p {
   display: block;
 }
 /* end */
+#quadricOutput  {
+  box-sizing: content-box;
+  margin: 0 auto;
+}
