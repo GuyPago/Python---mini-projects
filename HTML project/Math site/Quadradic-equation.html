@@ -31,7 +31,9 @@
       <div class="post">
 <div>
 <p id="quadricInputs">
-<input id="aInput" class="quadricInput" placeholder="a"><input id="bInput" class="quadricInput" placeholder="b"><input id="cInput" class="quadricInput" placeholder="c">
+$${ax^2 + bx + c = 0}$$
+$${x_{1,2} = \frac{{ - b \pm \sqrt {b^2 - 4ac} }}{{2a}}}$$
+<input id="aInput"  class="quadricInput" placeholder="a"><input id="bInput" class="quadricInput" placeholder="b"><input id="cInput" class="quadricInput" placeholder="c">
 </p>
 <button id="solveButton" onclick="solveQuadEquation()">Solve</button>
 </div>
@@ -42,6 +44,7 @@
           <p id="quadricOutput">
 
           </p>
+
 
         </div>
 
@@ -70,8 +73,9 @@
     </div>
   </div>
 
-<script type="text/javascript" src="js/math.js">
-
+<script type="text/javascript" src="js/math.js"></script>
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
 </script>
 </body>
 
