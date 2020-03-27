@@ -18,6 +18,8 @@ function solveQuadEquation() {
 //end
 
 
+
+
 // Math series
 function solveArithmeticProgression() {
   var a1 = parseFloat(document.getElementById("a1Input").value);
@@ -25,11 +27,11 @@ function solveArithmeticProgression() {
   var n = parseFloat(document.getElementById("nInput").value);
 
   var an = (a1 + (n - 1) * d);
-  var sn = (n/2)*(2*a1 + (n-1)*d);
+  var sn = (n / 2) * (2 * a1 + (n - 1) * d);
 
 
   document.getElementById("arithmeticOutput").innerHTML = "a" + n + " = " + an +
-  "<br>" + "s" + n + " = " + sn;
+    "<br>" + "s" + n + " = " + sn;
 }
 
 function solveGeometricprogression() {
@@ -38,10 +40,10 @@ function solveGeometricprogression() {
   var n = parseFloat(document.getElementById("ngInput").value);
 
   var an = a1 * Math.pow(q, (n - 1));
-  var sn = (a1*(Math.pow(q,n)-1))/(q - 1);
+  var sn = (a1 * (Math.pow(q, n) - 1)) / (q - 1);
 
   document.getElementById("geometricOutput").innerHTML = "a" + n + " = " + an +
-  "<br>" + "s" + n + " = " + sn;
+    "<br>" + "s" + n + " = " + sn;
 }
 
 
