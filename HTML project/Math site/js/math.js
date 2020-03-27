@@ -24,20 +24,25 @@ function solveArithmeticProgression() {
   var d = parseFloat(document.getElementById("dInput").value);
   var n = parseFloat(document.getElementById("nInput").value);
 
-  var an = (a1 + (n-1)*d);
+  var an = (a1 + (n - 1) * d);
+  var sn = (n/2)*(2*a1 + (n-1)*d);
 
-  document.getElementById("arithmeticOutput").innerHTML = "a"+n +" = " + an ;
+
+  document.getElementById("arithmeticOutput").innerHTML = "a" + n + " = " + an +
+  "<br>" + "s" + n + " = " + sn;
 }
 
-  function solveGeometricprogression() {
-    var a1 = parseFloat(document.getElementById("a1gInput").value);
-    var q = parseFloat(document.getElementById("qInput").value);
-    var n = parseFloat(document.getElementById("ngInput").value);
+function solveGeometricprogression() {
+  var a1 = parseFloat(document.getElementById("a1gInput").value);
+  var q = parseFloat(document.getElementById("qInput").value);
+  var n = parseFloat(document.getElementById("ngInput").value);
 
-    var an = a1* Math.pow(q,(n-1));
+  var an = a1 * Math.pow(q, (n - 1));
+  var sn = (a1*(Math.pow(q,n)-1))/(q - 1);
 
-    document.getElementById("geometricOutput").innerHTML = "a"+n +" = " + an ;
-  }
+  document.getElementById("geometricOutput").innerHTML = "a" + n + " = " + an +
+  "<br>" + "s" + n + " = " + sn;
+}
 
 
 //end
