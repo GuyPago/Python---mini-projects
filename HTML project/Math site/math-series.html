@@ -30,32 +30,39 @@
     <div class="post-container">
       <div class="post">
 
-<div id="arithmetic-serie"> <!-- Arithmetic serie -->
-  <img style="margin: 0 auto; display: block; " src="https://wikimedia.org/api/rest_v1/media/math/render/svg/c40e4c61d9c29ff1bc1e392c7624182f996d5c64" alt="">
-  <img style=" margin: auto; padding: 22px 0 6px 0; display: block; " src="https://wikimedia.org/api/rest_v1/media/math/render/svg/d534b9366b68311f06e07cc3d22b25f588ee318b" alt="">
-<p id="quadricInputs">
-<input id="a1Input"  class="quadricInput" placeholder="a1"><input id="bInput" class="quadricInput" placeholder="d"><input id="cInput" class="quadricInput" placeholder="n">
-</p>
-<button id="solveButton" onclick="solveQuadEquation()">Solve</button>
-</div>
+        <div id="arithmetic-serie">
+          <!-- Arithmetic serie -->
+          <img style="margin: 0 auto; display: block; " src="https://wikimedia.org/api/rest_v1/media/math/render/svg/c40e4c61d9c29ff1bc1e392c7624182f996d5c64" alt="">
+          <img style=" margin: auto; padding: 22px 0 6px 0; display: block; " src="https://wikimedia.org/api/rest_v1/media/math/render/svg/d534b9366b68311f06e07cc3d22b25f588ee318b" alt="">
+          <p id="quadricInputs">
+            <input id="a1Input" class="quadricInput" placeholder="a1">
+            <input id="dInput" class="quadricInput" placeholder="d">
+            <input id="nInput" class="quadricInput" placeholder="n">
+          </p>
+          <button id="solveButton" onclick="solveArithmeticProgression()">Solve</button>
+        </div>
 
-<div id="geometric-serie">  <!-- Geometric serie -->
-<img style="margin: 0 auto; display: block; " src="https://wikimedia.org/api/rest_v1/media/math/render/svg/d661c6435667c7a4e56549f178a4cdf91f270dd4" alt="">
-<img style="margin: auto; padding-top: 15px; display: block; " src="https://wikimedia.org/api/rest_v1/media/math/render/svg/650646b040509ba6b9ac87fd201dbfe75e27c903" alt="">
+        <div id="geometric-serie">
+          <!-- Geometric serie -->
+          <img style="margin: 0 auto; display: block; " src="https://wikimedia.org/api/rest_v1/media/math/render/svg/d661c6435667c7a4e56549f178a4cdf91f270dd4" alt="">
+          <img style="margin: auto; padding-top: 15px; display: block; " src="https://wikimedia.org/api/rest_v1/media/math/render/svg/650646b040509ba6b9ac87fd201dbfe75e27c903" alt="">
 
 
-<p id="quadricInputs">
-<input id="a1Input"  class="quadricInput" placeholder="a1"><input id="bInput" class="quadricInput" placeholder="d"><input id="cInput" class="quadricInput" placeholder="n">
-</p>
-<button id="solveButton" onclick="solveQuadEquation()">Solve</button>
-</div>
+          <p id="quadricInputs">
+            <input id="a1gInput" class="quadricInput" placeholder="a1">
+            <input id="qInput" class="quadricInput" placeholder="q">
+            <input id="ngInput" class="quadricInput" placeholder="n">
+          </p>
+          <button id="solveButton" onclick="solveGeometricprogression()">Solve</button>
+        </div>
 
       </div>
       <div class="post-container">
 
         <div class="post">
 
-          <p style=""id="arithmeticOutput"></p>ss  <p style="float: right;" id="geometricOutput">ss</p>
+          <p style="margin: 0 auto; display: block; float: left; padding-left: 180px;" id="arithmeticOutput"></p>
+          <p style=" margin: 0 auto; float: right; display: inline-block; padding-right: 180px; " id="geometricOutput"></p>
         </div>
 
 
@@ -83,10 +90,10 @@
     </div>
   </div>
 
-<script type="text/javascript" src="js/math.js"></script>
-<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
-<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
-</script>
+  <script type="text/javascript" src="js/math.js"></script>
+  <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+  <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+  </script>
 </body>
 
 </html>
