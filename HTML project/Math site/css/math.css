@@ -140,3 +140,20 @@ p {
   box-sizing: content-box;
   margin: 0 auto;
 }
+
+
+/* Math series */
+
+#arithmetic-serie{
+display: inline-block;
+padding-left: 120px;
+}
+
+#geometric-serie {
+display: inline-block;
+vertical-align: top;
+padding-left: 120px;
+}
+
+
+/* end */

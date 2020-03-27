@@ -29,24 +29,33 @@
   <div id="content">
     <div class="post-container">
       <div class="post">
-<div>
-  <p style="width: 150px; margin: 0 auto; ">$${a_n=a_1+(n-1)d}$$</p>
+
+<div id="arithmetic-serie"> <!-- Arithmetic serie -->
+  <img style="margin: 0 auto; display: block; " src="https://wikimedia.org/api/rest_v1/media/math/render/svg/c40e4c61d9c29ff1bc1e392c7624182f996d5c64" alt="">
+  <img style=" margin: auto; padding: 15px 0 13px 0; display: block; " src="https://wikimedia.org/api/rest_v1/media/math/render/svg/d534b9366b68311f06e07cc3d22b25f588ee318b" alt="">
+<p id="quadricInputs">
+<input id="a1Input"  class="quadricInput" placeholder="a1"><input id="bInput" class="quadricInput" placeholder="d"><input id="cInput" class="quadricInput" placeholder="n">
+</p>
+<button id="solveButton" onclick="solveQuadEquation()">Solve</button>
+</div>
+
+<div id="geometric-serie">  <!-- Geometric serie -->
+<img style="margin: 0 auto; display: block; " src="https://wikimedia.org/api/rest_v1/media/math/render/svg/d661c6435667c7a4e56549f178a4cdf91f270dd4" alt="">
+<img style="margin: auto; padding-top: 15px; display: block; " src="https://wikimedia.org/api/rest_v1/media/math/render/svg/650646b040509ba6b9ac87fd201dbfe75e27c903" alt="">
+
 
 <p id="quadricInputs">
-<input id="a1Input" class="quadricInput" placeholder="a1"><input id="bInput" class="quadricInput" placeholder="d"><input id="cInput" class="quadricInput" placeholder="n">
+<input id="a1Input"  class="quadricInput" placeholder="a1"><input id="bInput" class="quadricInput" placeholder="d"><input id="cInput" class="quadricInput" placeholder="n">
 </p>
-<button id="solveButton" class="solveButtons" onclick="solveQuadEquation()">Solve</button><button id="solveButton" class="solveButtons" onclick="solveQuadEquation()">Solve</button>
-
+<button id="solveButton" onclick="solveQuadEquation()">Solve</button>
 </div>
 
       </div>
       <div class="post-container">
-        <span style="display: inline-flex; padding-left: 0;  ">  $$S.t :     {x_{1,2} = \frac{{ - b \pm \sqrt {b^2 - 4ac} }}{{2a}}}$$</span>
 
         <div class="post">
 
-          <p id="quadricOutput">
-          </p>
+          <p style="margin: 0 auto; float: left;"id="arithmeticOutput"></p>  ss  <p style="float: right;" id="geometricOutput">ss</p>
         </div>
 
 
