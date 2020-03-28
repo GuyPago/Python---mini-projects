@@ -46,5 +46,6 @@ function solveGeometricprogression() {
     "<br>" + "s" + n + " = " + sn;
 }
 
+f
 
 //end
