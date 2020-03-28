@@ -45,7 +45,4 @@ function solveGeometricprogression() {
   document.getElementById("geometricOutput").innerHTML = "a" + n + " = " + an +
     "<br>" + "s" + n + " = " + sn;
 }
-
-f
-
 //end
