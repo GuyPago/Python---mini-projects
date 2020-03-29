@@ -46,3 +46,13 @@ function solveGeometricprogression() {
     "<br>" + "s" + n + " = " + sn;
 }
 //end
+
+
+// Average
+
+
+function findAverage() {
+
+}
+
+//end
