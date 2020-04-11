@@ -18,25 +18,6 @@ newAges
 ages.append(120)
 ages
 
-my_friend = "Sammy"
-my_friend
-if my_friend == "Bob":
-    print("Sup dude ?")
-elif my_friend == "Sammy":
-    print("Yo sammy")
-else:
-    print("I dont know you. get lost")
 
-
-foods = ["pizza","falafel","hamburger","bamba","water"]
-foods
-
-
-for i in foods[:]:
-    print(i)
-
-
-my_com = "PC"
-
-for i in range(5,100,2):
-    print(i)
+def say_my_name():
+    print("My name is Guy")
