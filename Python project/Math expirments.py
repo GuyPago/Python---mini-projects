@@ -1,12 +1,47 @@
-from IPython.display import Math
+import math
 
-Math(r'i\hbar \frac{dA}{dt}~=~[A(t),H(t)]+i\hbar \frac{\partial A}{\partial t}.')
-Math(r'f(x)~=~2')
+n = 1
+e = 1/math.factorial(n)
 
-count = 1
-while count < 1000:
-    count = count*2
-    print(count)
+while n < 19:
+    print(e)
+    n = n+1
+    e = e + e
 
-sidraHeshbonit = list(range(0, 1000, 9))  # Arithmetic progression. | list(range(a0, an, d))
-print(sidraHeshbonit[3])  # prints "a3".
+
+number = 5
+while number < 10:
+    print(number)
+    number += 1
+
+
+def first_func(bitc):
+    print("You have",bitc*3637,"Dollars !")
+
+bitcoin = 10
+first_func(bitcoin)
+
+
+def sec_func(int):
+    return int * 2
+sec = sec_func(4)
+
+
+def thrd_func(trd):
+    return trd // 2
+
+thrd = thrd_func(sec)
+thrd
+
+
+def first_func(num=0):
+    return num * 2
+
+first_func()
+
+
+def f(x=0):
+    return x**2 + 2*x + 5
+
+y = f(7)
+y

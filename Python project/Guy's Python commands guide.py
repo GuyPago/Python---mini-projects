@@ -24,16 +24,29 @@ test = "It is a test."
 test = test.replace("is", "was")  # Replaces x with y | 'var'.replace("x", "y")
 print(test)
 
+# loops
+
 print("Lets count to 10 :")
 count = 0
 while count < 10:  # While loop | while 'condition':
-    count = count + 1
+    count += 1
     print(count)
 
+cart = ["corn","milk","cheetos"]  # Create a list. | 'list_name' = ["x","y","z"]
+for i in cart:  # Print every list item. i starts at 0. | for i in 'list':
+    print(i)
 
 # Functions
 
-def welcomeUser(name):  # defines a function | def 'funcName'(parameter)
+
+def f(x=0):  # defines a function | def 'funcName'(parameter='default_value')
+    return x**2 + 2*x + 5  # returns a value | return 'value'
+
+y = f(7)  # Defines 'y' while x = 7
+print(y)
+
+
+def welcomeUser(name="a"):
     print("Welcome, " + name + "!")
 welcomeUser("Betanir")  # call function + parameter
 
@@ -44,4 +57,5 @@ def toFahrenheit(celsius):
 
 degreesInput = input("Enter celsius degrees: ")
 degrees = toFahrenheit(int(degreesInput))
-print(degreesInput + " degrees celsius are " + str(degrees) + " degrees Fahrenheit")
+print(degreesInput + " degrees celsius are " + str(degrees)
+                   + " degrees Fahrenheit")  # continuation line break
