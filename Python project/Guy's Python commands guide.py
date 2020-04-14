@@ -30,12 +30,20 @@ print(cart)
 foods = {'water','milk','water'}  # Crate a set.  | 'set_name' = {'x','y','z'}
 print(foods)  # Sets ignore duplicate values.
 
-dict_coding_lang = {'Guy':'Python', 'Betanir':'C#','Ram':'Pascal'}
-# Create a dictionary  | 'dict_name' = {'key':'value','key':'value','key:value'}
 
+# Create a dictionary  | 'dict_name' = {'key':'value','key':'value','key:value'}
+dict_coding_lang = {'Guy':'Python', 'Betanir':'C#','Ram':'Pascal'}
+dict_coding_lang['Yulia'] = "Nothing"  # Adds a dict item. | 'dict_name'['key'] = 'value'
+print(dict_coding_lang)
 print(dict_coding_lang['Ram'])  # Prints dictionary definition for 'Ram'.
-for k,v in dict_coding_lang.items():
-    print(k + ': ' + v)
+
+dict_coding_lang.update({'Yulia':'HTML'})  # Updates value.
+print(len(dict_coding_lang))  # Prints the length of the dictionary.
+
+for k,v in dict_coding_lang.items():  # prints a list with dict keys and values.
+    print(k + ': ' + v + ".")
+
+
 # loops
 
 print("Lets count to 10 :")
