@@ -1,3 +1,10 @@
+# Convert Integer input to 'Binary' language.
+def int_to_binary(val=0):
+    return bin(val)[2:].zfill(8)  # Prints from the 2nd letter | Prints min of 8 letters.
+
+for i in range(100):  # Prints binary values of 0 to 100.
+    print(int_to_binary(i))
+
 
 # Convert user input to 'ASCII' language.
 while True:
@@ -11,6 +18,14 @@ while True:
 
 # ^^^^^End^^^^^ #
 
+# Swap values.
+t = 10
+u = 5
+
+t,u = u,t
+print("t =",t)
+print("u =",u)
+# ^^^^^End^^^^^ #
 
 #  Multiplication table
 x = 10
