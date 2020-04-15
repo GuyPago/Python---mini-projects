@@ -21,5 +21,15 @@ def method_2():
         n += 1
     return Sum
 
-method_1()
+
+
+if method_1() == method_2():
+    print("Guy you were right")
+else:
+    print("WRONG!")
 method_2()
+
+gezza_kniyot = ["milk","shoko","batsek"]
+gezza_kniyot.append("mits")
+
+print(gezza_kniyot)

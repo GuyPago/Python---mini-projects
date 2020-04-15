@@ -18,7 +18,7 @@ while True:
         break
     elif (user_input == "h"):
         print("""\n'q' - Quit\n'h' - Help'\n'd' - Print full dictionary\n"""
-              + "'l' -Print data size\n'a - Add a new definition\n"
+              + "'l' - Print data size\n'a' - Add a new definition\n"
               + "'u' - Update extisting definiton\n\n")
     elif (user_input == '0'):
         print("\n\nNot entered any value\n")
@@ -47,3 +47,5 @@ while True:
             print("\nGuy's definiton for",user_input + ":\n" + user_input.capitalize(),'=',value + ".\n")
         else:
             print("Value doesn't exist, please select another value.\n")
+
+milon["Sol"]
