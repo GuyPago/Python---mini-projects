@@ -15,7 +15,7 @@ while True:
     user_input = str(input("Enter a value to search "
                      + "('q' to quit or 'h' for help)\n")) or '0'
     if (user_input == "q"):
-        print("\Thanks for using Guy's dictionary, Bye !")
+        print("\nThanks for using Guy's dictionary, Bye !")
         break
     elif (user_input == "h"):
         print("\n\nDictionary RoadMap:\n'q' - Quit\n'h' - Help\n'd' - Print full dictionary\n"
@@ -41,14 +41,16 @@ while True:
             print("\nSuccess!\nAdded '" + new_key+"' to dictionary\n\n")
     elif (user_input == 'u'):
         update_key = str(input("\nEnter existing value:\n")).capitalize() or '0'
-        update_value = str(input("\nEnter a new value for '"+update_key+"':\n")).capitalize() or '0'
-        if (update_key == '0') or (update_value == '0'):
-            print("Error!\nNot entered definition/value\n\n")
-        elif (update_key not in milon.keys()):
-            print("Value doesn't exist. for adding new values enter 'a'")
+        if (update_key not in milon.keys()):
+            print("\ncan't update '" + update_key +
+                  "' because it doesn't exist.\nFor adding new values, enter 'a'\n\n")
         else:
-            milon.update({update_key:update_value})
-            print("\nSuccess!\nUpdated '" + update_key+"' in dictionary\n\n")
+            update_value = str(input("\nEnter a new value for '"+update_key+"':\n")).capitalize() or '0'
+            if (update_key == '0') or (update_value == '0'):
+                print("Error!\nNot entered definition/value\n\n")
+            else:
+                milon.update({update_key:update_value})
+                print("\nSuccess!\nUpdated '" + update_key+"' in dictionary\n\n")
     elif (user_input == 'r'):
         remove_key = str(input("\nEnter value to remove:\n")).capitalize() or '0'
         if (remove_key not in milon.keys()):
