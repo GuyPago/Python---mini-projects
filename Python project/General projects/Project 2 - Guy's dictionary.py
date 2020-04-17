@@ -1,5 +1,6 @@
-# Guy's personal dictionary. Run code for instructions.
+import time
 
+# Guy's personal dictionary. Run code for instructions.
 milon = {"Guy":"GuyPago",
          "Yulia":"Gezza",
          "Nir":"Betanir",
@@ -7,8 +8,10 @@ milon = {"Guy":"GuyPago",
          "Sol":"Politis"}
 
 def call_dictionary_list():
+    n = 1
     for i,j in milon.items():
-        print(i + ":",j)
+        print(str(n) + ". " + i + ":",j)
+        n += 1
 
 print("Welcome to Guy's dictionary !\n")
 while True:
@@ -16,29 +19,33 @@ while True:
                      + "('q' to quit or 'h' for help)\n")) or '0'
     if (user_input == "q"):
         print("\nThanks for using Guy's dictionary, Bye !")
+        time.sleep(1)
         break
     elif (user_input == "h"):
         print("\n\nDictionary RoadMap:\n'q' - Quit\n'h' - Help\n'd' - Print full dictionary\n"
-              + "'l' - Print data size\n'a' - Add a new definition\n"
+              + "'l' - Print dictionary length\n'a' - Add a new definition\n"
               + "'u' - Update extisting value\n'r' - Remove extisting definiton\n")
     elif (user_input == '0'):
         print("\n\nNot entered any value\n")
     elif (user_input == 'd'):
-        print('\nFull dictionary list\n')
+        print('\nFull dictionary list:\n')
         call_dictionary_list()
         print('\n')
     elif (user_input == 'l'):
         print("\nGuy's dictionary has a data base of",len(milon),"values.\n\n")
     elif (user_input == 'a'):
         new_key = str(input("\nEnter a new value:\n")).capitalize() or '0'
-        new_value = str(input("\nEnter a value for '"+new_key+"':\n")).capitalize() or '0'
-        if (new_key == '0') or (new_value == '0'):
-            print("Error - not entered key/value.\n\n")
-        elif (new_key in milon.keys()) or (new_value in milon.values()):
-            print("\nError!\nDefinition already exists in dictionary.\nFor updating values enter 'u'\n")
+        if (new_key in milon.keys()):
+            print("\nError!\nValue already exists in dictionary.\nFor updating values enter 'u'\n")
+        elif (new_key == '0'):
+            print("Error!\nNot entered any value\n")
         else:
-            milon[new_key] = new_value
-            print("\nSuccess!\nAdded '" + new_key+"' to dictionary\n\n")
+            new_value = str(input("\nEnter a definition for '"+new_key+"':\n")).capitalize() or '0'
+            if (new_value == '0'):
+                print("Error - not entered a definition.\n\n")
+            else:
+                milon[new_key] = new_value
+                print("\nSuccess!\nAdded '" + new_key+"' to dictionary\n\n")
     elif (user_input == 'u'):
         update_key = str(input("\nEnter existing value:\n")).capitalize() or '0'
         if (update_key not in milon.keys()):
@@ -53,7 +60,9 @@ while True:
                 print("\nSuccess!\nUpdated '" + update_key+"' in dictionary\n\n")
     elif (user_input == 'r'):
         remove_key = str(input("\nEnter value to remove:\n")).capitalize() or '0'
-        if (remove_key not in milon.keys()):
+        if (remove_key == "0"):
+            print("Error!\nNot entered any value\n")
+        elif (remove_key not in milon.keys()):
             print("\nError!\n'" + remove_key + "' doesn't exist.\n\n")
         else:
             r_conf = str(input("\nAre you sure you want to remove '"+remove_key
