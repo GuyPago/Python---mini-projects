@@ -20,7 +20,7 @@ def call_dictionary():
         user_input = str(input("Enter a value to search "
                          + "('q' to quit or 'h' for help)\n")) or '0'
         if (user_input == "q"):
-            print("\nThanks for using Guy's dictionary, Bye !")
+            print("\nThanks for using Guy's dictionary, Bye !\n\n\n")
             time.sleep(1)
             break
         elif (user_input == "h"):
@@ -85,5 +85,3 @@ def call_dictionary():
                       ":\n" + user_input.capitalize(),'=',value + ".\n")
             else:
                 print("\n'" + search_key + "' doesn't exist, please select another value.\n\n")
-
-call_dictionary()
