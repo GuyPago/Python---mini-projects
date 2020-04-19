@@ -13,11 +13,14 @@ while True:
     elif (user_input == 'd'):
         print("\nLaunching 'Guy's dictionary', please hold...")
         time.sleep(0.7)
-        dot = "." * 15
+        dot = "." * 5
+        t = 0.3
         for i in dot[:]:
             print(dot)
             dot = dot[0:-1]
-            time.sleep(0.03)
+            time.sleep(t)
+            t -= 0.05
+        print("\n")
         Project_2_Guys_dictionary.call_dictionary()
     else:
         print("\nUndefined request\n\n")
