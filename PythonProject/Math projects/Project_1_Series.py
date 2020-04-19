@@ -9,7 +9,7 @@ Math(r'S_n ~=~ \frac{n}{2} [2a_1+(n-1)d]')  # 'Sn' function Algebric display
 # Arithmetic progression
 def arithmetic_progression():
     while True:
-        print("Welcome to Guy's geometric progression solver.   (enter 'q' to quit)\n")
+        print("Welcome to Guy's Arithmetic progression solver.   (enter 'q' to quit)\n")
 
         a1 = input("please enter 'a1': ")
         if (a1 == 'q'):
@@ -23,6 +23,10 @@ def arithmetic_progression():
             except ValueError:
                 print("Not entered any number\n")
                 a1 = input("please enter 'a1': ")
+                if (a1 == 'q'):
+                    print("Going back to hub..\n")
+                    time.sleep(2)
+                    break
 
         d_not_legit = True
         while d_not_legit:
@@ -62,6 +66,10 @@ def geometric_progression():
             except ValueError:
                 print("Not entered any number\n")
                 a1 = input("please enter 'a1': ")
+                if (a1 == 'q'):
+                    print("Going back to hub..\n")
+                    time.sleep(2)
+                    break
 
         q_not_legit = True
         while q_not_legit:
