@@ -13,8 +13,8 @@ def arithmetic_progression():
 
         a1 = input("please enter 'a1': ")
         if (a1 == 'q'):
-            print("Going back to hub..\n")
-            time.sleep(2)
+            print("Going back to Math center..\n\n")
+            time.sleep(0.5)
             break
         while type(a1) == str:
             try:
