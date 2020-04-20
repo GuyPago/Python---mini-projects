@@ -1,4 +1,4 @@
-import Project_2_Guys_dictionary
+from Project_2_Guys_dictionary import call_dictionary
 import time
 
 def launch_hub():
@@ -22,6 +22,7 @@ def launch_hub():
                 time.sleep(t)
                 t -= 0.05
             print("\n")
-            Project_2_Guys_dictionary.call_dictionary()
+            call_dictionary()
         else:
             print("\nUndefined request\n\n")
+launch_hub()

@@ -1,6 +1,5 @@
-import sys
-sys.path.append('guypago/PythonProject/GeneralProjects/')
-from GeneralProjects import project_3_guyhub
+import time
+from ..GeneralProjects import Project_3_GuyHub
 
 
 def mat_hub():
