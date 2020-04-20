@@ -2,19 +2,19 @@ import time
 import sys
 sys.path.append('C:\\Users\guypa\github\guypago\PythonProject\MathProjects')
 import Project__X_Math_Center
-from Project_2_Guys_dictionary import call_dictionary
+from GeneralProjects.Project_2_Guys_dictionary import call_dictionary
 
 def goto(place):
     print("\nLaunching '" + place + "', please hold...")
     time.sleep(0.7)
-    dot = "." * 5
+    dot = "." * 7
     t = 0.3
     for i in dot[:]:
         print(dot)
         dot = dot[0:-1]
         time.sleep(t)
         t -= 0.05
-    print("\n")
+
 
 def launch_hub():
     while True:
