@@ -5,9 +5,12 @@ from Project_3_GuyHub import launch_hub
 
 def mat_hub():
     while True:
-        user_input = input("Welcome to Guy's Math center\n\n's' --> Series" +
+        user_input = input("Welcome to Guy's Math center\n\n's' --> Series\n" +
                            "q --> Back to hub")
         if (user_input == 'q'):
             print("Going back to hub..")
             time.sleep(2)
             launch_hub()
+
+if __name__ == "__main__":
+    mat_hub()
