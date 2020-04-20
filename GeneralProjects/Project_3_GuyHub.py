@@ -1,9 +1,11 @@
 from Project_2_Guys_dictionary import call_dictionary
 import time
 
+
 def launch_hub():
     while True:
-        user_input = str(input("Welcome to guy's Hub!\n\nFor guy's dictionary --> enter 'd'\n" +
+        user_input = str(input("Welcome to guy's Hub!\n\nFor Guy's Math-Center --> enter 'm'\n"+
+                               "For Guy's Dictionary --> enter 'd'\n\n" +
                                "To quit --> enter 'q'\n")) or '0'
         if (user_input == '0'):
             print("\nNot entered any value\n\n")
@@ -25,4 +27,7 @@ def launch_hub():
             call_dictionary()
         else:
             print("\nUndefined request\n\n")
-launch_hub()
+
+
+if __name__ == "__main__":
+    launch_hub()
