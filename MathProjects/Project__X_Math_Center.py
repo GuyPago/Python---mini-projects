@@ -1,5 +1,9 @@
 import time
-from PythonProject.GeneralProjects.Project_3_GuyHub import launch_hub
+import sys
+sys.path.append('C:\\Users\guypa\github\guypago\PythonProject\GeneralProjects')
+from Project_3_GuyHub import launch_hub
+
+
 launch_hub()
 def mat_hub():
     while True:
