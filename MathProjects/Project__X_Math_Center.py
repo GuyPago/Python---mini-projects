@@ -1,6 +1,6 @@
 import time
-from ..GeneralProjects import Project_3_GuyHub
-Project_3_GuyHub.launch_hub()
+from PythonProject.GeneralProjects.Project_3_GuyHub import launch_hub
+launch_hub()
 def mat_hub():
     while True:
         user_input = input("Welcome to Guy's Math center\n\n's' --> Series" +
