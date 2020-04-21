@@ -8,10 +8,7 @@ def mat_hub():
         user_input = input("Welcome to Guy's Math center !\n\n's' --> Series\n" +
                            "'q' --> Back to hub\n")
         if (user_input == 'q'):
-            print("Going back to hub..")
-            time.sleep(1)
-            print("\n\n")
-            GuyHub.launch_hub()
+            GuyHub.back_to_hub("Guy's Math Center")
         elif (user_input == "s"):
             pass
 

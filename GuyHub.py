@@ -4,16 +4,30 @@ sys.path.append('C:\\Users\guypa\github\guypago\PythonProject\MathProjects')
 import Project__X_Math_Center
 from GeneralProjects.Project_2_Guys_dictionary import call_dictionary
 
-def goto(place):
+def goto(place,dots=8):
     print("\nLaunching '" + place + "', please hold...")
     time.sleep(0.7)
-    dot = "." * 7
+    dot = "." * dots
     t = 0.3
     for i in dot[:]:
         print(dot)
         dot = dot[0:-1]
         time.sleep(t)
-        t -= 0.05
+        t -= 0.04
+
+def back_to_hub(place,dots=8):
+    print("\nThanks for using '" + place  + "', Going back to Hub...")
+    time.sleep(0.7)
+    dot = "." * 1
+    t = 0.05
+    for i in range(dots):
+        print(dot)
+        dot += "."
+        time.sleep(t)
+        t += 0.05
+    print("\n")
+    launch_hub()
+
 
 
 def launch_hub():
