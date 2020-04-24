@@ -1,12 +1,12 @@
 import sys
 sys.path.append('C:\\Users\guypa\github\guypago\PythonProject')
 import GuyHub
-import Guy_Data
+import Guy_Data2
 
 
 # Guy's personal dictionary. Run code for instructions.
 
-milon = Guy_Data.dict2
+milon = Guy_Data2.dict2
 
 
 def call_dictionary_list():
@@ -22,6 +22,7 @@ def call_dictionary():
                          + "('q' to quit or 'h' for help)\n")) or '0'
         if (user_input == "q"):
             GuyHub.back_to_hub("Guy's Dictionary")
+            break
         elif (user_input == "h"):
             print("\n\nDictionary RoadMap:\n'q' - Quit\n'h' - Help\n'd' - Print full dictionary\n"
                   + "'l' - Print dictionary length\n'a' - Add a new definition\n"
@@ -84,9 +85,10 @@ def call_dictionary():
                       ":\n" + user_input.capitalize(),'=',value + ".\n")
             else:
                 print("\n'" + search_key + "' doesn't exist, please select another value.\n\n")
-f = open("PythonProject/Guy_Data.py", "w")
-f.write("dict2 = " + str(milon))
-f.close()
+
+        f = open("Guy_Data2.py", "w")
+        f.write("dict2 = " + str(milon))
+        f.close()
 
 
 
