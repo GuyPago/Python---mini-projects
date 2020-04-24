@@ -1,14 +1,13 @@
-import time
 import sys
 sys.path.append('C:\\Users\guypa\github\guypago\PythonProject')
 import GuyHub
+import Guy_Data
+
+
 # Guy's personal dictionary. Run code for instructions.
 
-milon = {"Guy":"GuyPago",
-         "Yulia":"Gezza",
-         "Nir":"Betanir",
-         "Ram":"Ateenim",
-         "Sol":"Politis"}
+milon = Guy_Data.dict2
+
 
 def call_dictionary_list():
     n = 1
@@ -85,6 +84,9 @@ def call_dictionary():
                       ":\n" + user_input.capitalize(),'=',value + ".\n")
             else:
                 print("\n'" + search_key + "' doesn't exist, please select another value.\n\n")
+f = open("PythonProject/Guy_Data.py", "w")
+f.write("dict2 = " + str(milon))
+f.close()
 
 
 
