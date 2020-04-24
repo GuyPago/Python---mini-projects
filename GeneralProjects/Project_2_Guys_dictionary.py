@@ -1,12 +1,12 @@
 import sys
 sys.path.append('C:\\Users\guypa\github\guypago\PythonProject')
 import GuyHub
-import Guy_Data2
+import Guy_Data
 
 
 # Guy's personal dictionary. Run code for instructions.
 
-milon = Guy_Data2.dict2
+milon = Guy_Data.dict2
 
 
 def call_dictionary_list():
@@ -86,9 +86,9 @@ def call_dictionary():
             else:
                 print("\n'" + search_key + "' doesn't exist, please select another value.\n\n")
 
-        f = open("Guy_Data2.py", "w")
-        f.write("dict2 = " + str(milon))
-        f.close()
+            f = open("C:\\Users\guypa\github\guypago\PythonProject\Guy_Data.py", "w")
+            f.write("dict2 = " + str(milon))
+            f.close()
 
 
 
