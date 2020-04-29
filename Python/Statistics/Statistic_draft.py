@@ -1,9 +1,13 @@
-import numpy as np
 import matplotlib.pyplot as plt
+import numpy as np
 
-mean = 89; std = 6; variance = np.square(std)
-x = np.arange((mean-2*std),(mean+2*std),0.1)
-f = np.exp(-np.square(x-mean)/2*variance)/(np.sqrt(2*np.pi*variance))
-plt.plot(x,f)
-plt.ylabel('gaussian distribution')
+mu, sigma = 89, 6
+s = np.random.normal(mu, sigma,size=10000)
+
+# Create the bins and histogram
+count, bins, ignored = plt.hist(s,100, stacked=True, range=(70,100), cumulative=True)
+
+# Plot the distribution curve
+plt.plot(bins, 1/(sigma * np.sqrt(2 * np.pi)) *
+    np.exp( - (bins - mu)**2 / (2 * sigma**2) ),       linewidth=3, color='y')
 plt.show()
