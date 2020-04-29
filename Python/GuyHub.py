@@ -1,6 +1,6 @@
 import time
 import sys
-sys.path.append('C:\\Users\guypa\github\guypago\PythonProject\MathProjects')
+sys.path.append('C:\\Users\guypa\github\guypago\Python\MathProjects')
 import Project__X_Math_Center
 from GeneralProjects.Project_2_Guys_dictionary import call_dictionary
 
@@ -26,7 +26,7 @@ def back_to_hub(place,dots=8):
         time.sleep(t)
         t += 0.05
     print("\n")
-    
+
 
 
 

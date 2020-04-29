@@ -1,6 +1,6 @@
 import time
 import sys
-sys.path.append('C:\\Users\guypa\github\guypago\PythonProject')
+sys.path.append('C:\\Users\guypa\github\guypago\Python')
 import GuyHub
 
 def mat_hub():

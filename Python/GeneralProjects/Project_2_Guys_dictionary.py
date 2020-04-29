@@ -1,5 +1,5 @@
 import sys
-sys.path.append('C:\\Users\guypa\github\guypago\PythonProject')
+sys.path.append('C:\\Users\guypa\github\guypago\Python')
 import GuyHub
 import Guy_Data
 
