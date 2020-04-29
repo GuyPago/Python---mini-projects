@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <link rel="stylesheet" href="css/math.css">
+  <title>Quadradic solver</title>
+
+  <style>
+    body {
+      color: #555;
+      margin: 0;
+      font-family: "Montserrat", sans-serif;
+    }
+  </style>
+</head>
+
+
+<body>
+  <div id="header">
+    <div class="container">
+      <a id="header-title" href="index.html">PagoMath</a>
+      <ul id="header-nav" class="navbar-links">
+        <li><a href="about.html">About</a></li>
+        <li><a href="mailto: guypago@outlook.com?subject=Feedback regarding PagoMath.">Contact</a></li>
+      </ul>
+
+    </div>
+  </div>
+  <div id="content">
+    <div class="post-container">
+      <div class="post">
+<div>
+  <p style="width: 135px; margin: 0 auto; ">$${ax^2 + bx + c = 0}$$</p>
+
+<p id="quadricInputs">
+<input id="aInput"  class="quadricInput" placeholder="a"><input id="bInput" class="quadricInput" placeholder="b"><input id="cInput" class="quadricInput" placeholder="c">
+</p>
+<button id="solveButton" onclick="solveQuadEquation()">Solve</button>
+</div>
+
+      </div>
+      <div class="post-container">
+        <span style="display: inline-flex; padding-left: 0;  ">  $$S.t :     {x_{1,2} = \frac{{ - b \pm \sqrt {b^2 - 4ac} }}{{2a}}}$$</span>
+        <p style=" display: inline-block; padding-left: 440px; text-align: justify;" id="quadricOutput">
+
+        <div class="post">
+
+          </p>
+        </div>
+
+
+      </div>
+    </div>
+  </div>
+
+
+  <div id="footer">
+    <div class="container">
+      <div class="column">
+        <h4>My links</h4>
+        <p>
+          <a href="https://www.instagram.com/guypago/">Instagram</a>
+          <br>
+          <a href="https://twitter.com/TaggarGuy">Twitter</a>
+          <br>
+          <a href="https://www.youtube.com/user/advenzizi">YouTube</a>
+        </p>
+      </div>
+      <div class="column">
+        <h4>My story</h4>
+        <p>Ateenim!!!!.</p>
+      </div>
+    </div>
+  </div>
+
+<script type="text/javascript" src="js/math.js"></script>
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+</script>
+</body>
+
+</html>

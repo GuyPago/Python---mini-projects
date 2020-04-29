@@ -1,0 +1,64 @@
+/* index**************************************/
+.intro {
+  border: solid 2px black;
+  width: 220px;
+  background-color: lightGray;
+  color: rgb(45, 135, 36);
+}
+
+.loginIMG {
+  height: 40px;
+  width: 40px;
+  position: relative;
+  bottom: 42px;
+  border: solid 2pxS;
+  border-radius: 22pxS;
+}
+
+.button {
+  position: relative;
+  bottom: 42px;
+  margin-left: 169px;
+}
+
+.usernameField {
+  margin: 0 0px 0px 45px;
+}
+
+.loginDiv {
+  margin: auto;
+  background: linear-gradient(275deg, rgb(254, 255, 0), rgb(0, 255, 6));
+  border-radius: 20px;
+  width: 230px;
+}
+
+/*super villans**************************************/
+
+#username {
+  background-color: cornSilk;
+  font-size: 22px;
+  border: solid 3px black;
+  border-radius: 5px;
+  padding: 7px 10px 7px 10px;
+  margin: auto;
+  width: 50%;
+
+}
+
+#character {
+  background-color: mistyRose;
+  font-size: 22px;
+  border: solid 3px black;
+  border-radius: 5px;
+  padding: 7px 10px 7px 10px;
+  margin: auto;
+  width: 50%;
+}
+
+.picker {
+  padding-top: 200px;
+}
+
+.characterFill {
+  padding
+}

@@ -11,3 +11,13 @@ def yulia():
 
 
 yulia()
+
+list = ['nir','guy','yes']
+list * (-1)
+
+list.append('guy2')
+print(list)
+
+list.insert(2,'hazze4')
+print(list)
+print(list.index('bes'))
