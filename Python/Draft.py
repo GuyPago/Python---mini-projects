@@ -9,15 +9,16 @@ z = x + y
 plt.plot(x, y)
 plt.show()
 
-ages = [25,32,16,56]
-type(ages)
 
-ages[-1]
-newAges = ages + [12,42,11]
-newAges
-ages.append(120)
-ages
+x = 4
+y = 2
 
+try:
+    print(x/y)
+except:
+    print('Cant divide by zero, mr athenes.')
 
-def say_my_name():
-    print("My name is Guy")
+if x/y == 2:
+    raise ValueError
+
+print((16*70)/3)
