@@ -13,3 +13,7 @@ def ave(L):
     return sum(L)/len(L)
 
 ave(x)
+sum = 0
+for i in x:
+    sum += i
+print(sum)
