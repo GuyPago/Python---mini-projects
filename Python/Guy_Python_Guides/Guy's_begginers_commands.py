@@ -34,20 +34,29 @@ print('_'.join('Betanir')+'.')  # Put values between letters. | 'str'.join(var)
 # List/set/tuple/dict
 
 # List
-cart = ["corn","milk","cheetos"]  # Create a list. | 'list_name' = ['x','y','z']
+cart = ["corn","milk","cheetos","milk"]  # Create a list. | 'list_name' = ['x','y','z']
 cart[1] = 'popcorn'  # Change second item to 'popcorn' | 'list'[i] = 'x'
 cart.append('potato')  # Add a new item to last. | 'list'.append('new_item')
 cart.pop(2)  # Removes Third item | 'list'.pop(i) \ default == -1
+cart.clear()  # Clears all items. | 'list'.clear()
+empty_list = []  # Create an empty list. | 'list' = []
 print(cart)
 
-# Tuple
+# Tuple - an immutable list.
 cart_2 = ("corn","milk","cheetos")  # Create a tuple. | 'tuple_name' = ['x','y','z']
 cart_2.index('milk')  # Returns the index of milk | 'list'.index('word')
+empty_tuple = ()  # Create an empty tuple. | 'tuple' = ()
 print(cart_2)  # Tuples are immutable(can't modify/add/remove items)
 
-# Set
-foods = {'water','milk','water'}  # Crate a set.  | 'set_name' = {'x','y','z'}
-print(foods)  # Sets ignore duplicate values.
+# Set - no index order, ignores duplicate values.
+foods = {'water','milk','water'}  # Crate a set. | 'set_name' = {'x','y','z'}
+foods = set(cart) # Convert a list into a set. | 'new_set' = set('list')
+foods.add('coco') # Adds a single element to set. | 'set'.add('item')
+foods.update(cart)  # Adds multiple elements to set. | 'set'.update('x','y','z')
+foods.pop()  # Remove & return a random item. | 'set'.pop()
+foods.clear()  # Clears all items. | 'list'.clear()
+empty_set = set()  # Create an empty set. | 'set' = set()
+print(foods)
 
 
 # Create a dictionary  | 'dict_name' = {'key':'value','key':'value','key:value'}
