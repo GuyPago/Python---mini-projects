@@ -71,3 +71,13 @@ def recursive_func(x):
 print(recursive_func(10))
 
 # ^^^^^End^^^^^ #
+
+# Specific letter counter. | count(world,'requested letter')
+def count(word,L):
+    c = 0
+    for i in word:
+        if L == i:
+            c+=1
+    return c
+
+# ^^^^^End^^^^^ #

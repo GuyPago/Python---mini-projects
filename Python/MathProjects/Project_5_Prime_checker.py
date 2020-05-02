@@ -11,3 +11,8 @@ def prime_check(n):
 
 
 prime_check(77655577)
+prime_check(1446111)
+
+24*60*60/5
+77655575/17280
+4494/365

@@ -3,11 +3,13 @@ name = input("What's Your name? ")  # var gets input from user. | input("ask use
 greetName = greet + name + ". "
 print((greetName + "\n") * 2)  # Adds a line break ("\n") || Prints x times (*x)
 
+
 story = name + """ Has quite an interesting story,
 He was just about to share it but \
 suddenly, He turned into a frog. \n"""
 #  Makes every natural lineBreak work | ("""x""") || Prevent a br by using (\)
 print(story)
+
 
 firstLetter = name[0]  # Gets the x letter of the string. | [x]
 firstLetters = greet[0:4]  # Stores the x to y letters of the string. | [x:y]
@@ -15,18 +17,35 @@ firstLetters = greet[0:4]  # Stores the x to y letters of the string. | [x:y]
 print("Your name's first letter is: " + firstLetter)
 print("Hitler is in " + firstLetters)
 
+
 num = 25
 favoriteNumber = "Your favorite number is: "
 print(favoriteNumber + str(num))  # Turns a variable to string. | (str)
 print(len(favoriteNumber))  # prints the length of the string. | (len)
 
+
 test = "It is a test."
 test = test.replace("is", "was")  # Replaces x with y | 'var'.replace("x", "y")
 print(test)
 
+
+print('_'.join('Betanir')+'.')  # Put values between letters. | 'str'.join(var)
+
+# List/set/tuple/dict
+
+# List
 cart = ["corn","milk","cheetos"]  # Create a list. | 'list_name' = ['x','y','z']
+cart[1] = 'popcorn'  # Change second item to 'popcorn' | 'list'[i] = 'x'
+cart.append('potato')  # Add a new item to last. | 'list'.append('new_item')
+cart.pop(2)  # Removes Third item | 'list'.pop(i) \ default == -1
 print(cart)
 
+# Tuple
+cart_2 = ("corn","milk","cheetos")  # Create a tuple. | 'tuple_name' = ['x','y','z']
+cart_2.index('milk')  # Returns the index of milk | 'list'.index('word')
+print(cart_2)  # Tuples are immutable(can't modify/add/remove items)
+
+# Set
 foods = {'water','milk','water'}  # Crate a set.  | 'set_name' = {'x','y','z'}
 print(foods)  # Sets ignore duplicate values.
 
@@ -42,6 +61,8 @@ print(len(dict_coding_lang))  # Prints the length of the dictionary.
 
 for k,v in dict_coding_lang.items():  # prints a list with dict keys and values.
     print(k + ': ' + v + ".")
+
+# ^^^^^End^^^^^ #
 
 
 # loops
