@@ -59,16 +59,22 @@ empty_set = set()  # Create an empty set. | 'set' = set()
 print(foods)
 
 
-# Create a dictionary  | 'dict_name' = {'key':'value','key':'value','key:value'}
-dict_coding_lang = {'Guy':'Python', 'Betanir':'C#','Ram':'Pascal'}
-dict_coding_lang['Yulia'] = "Nothing"  # Adds a dict item. | 'dict_name'['key'] = 'value'
-print(dict_coding_lang)
-print(dict_coding_lang['Ram'])  # Prints dictionary definition for 'Ram'.
+# dictionary  | 'dict_name' = {'key':'value','key':'value','key:value'}
+my_dict = {'Guy':'Python', 'Betanir':'C#','Ram':'Pascal'}
+my_dict['Yulia'] = "Nothing"  # Adds an item. | 'dict'['new_key'] = 'value'
+my_dict['Guy'] = 'All'  # Updates value. | 'dict'['existing_key'] = 'value'
+my_dict.update({'Yulia':'HTML'})  # Updates value.
+my_dict.pop('Guy')  # Removes and returns an item. | 'dict'.pop('existing_key')
+my_dict.popitem()  # Removes and returns last item. | 'dict'.popitem()
+del my_dict['Yulia']  # Removes an item.
+my_dict.clear()  # Removes all items from dictionary.
+print(my_dict)
+my_dict['Ram']  # Returns dictionary definition for 'Ram'.
+my_dict.get('ram')  # Same ^, but returns 'none' instead of value_error
 
-dict_coding_lang.update({'Yulia':'HTML'})  # Updates value.
-print(len(dict_coding_lang))  # Prints the length of the dictionary.
+print(len(my_dict))  # Prints the length of the dictionary.
 
-for k,v in dict_coding_lang.items():  # prints a list with dict keys and values.
+for k,v in my_dict.items():  # prints a list with dict keys and values.
     print(k + ': ' + v + ".")
 
 # ^^^^^End^^^^^ #
