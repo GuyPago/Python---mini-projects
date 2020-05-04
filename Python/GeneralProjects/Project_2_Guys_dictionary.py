@@ -1,7 +1,6 @@
 import sys
 sys.path.append('C:\\Users\guypa\github\guypago\Python')
 import GuyHub
-import Guy_Data
 import json
 
 
@@ -10,7 +9,6 @@ import json
 
 
 milon = json.load(open('data\dict.txt'))
-
 
 def call_dictionary_list():
     n = 1
