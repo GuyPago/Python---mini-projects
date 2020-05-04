@@ -2,12 +2,14 @@ import sys
 sys.path.append('C:\\Users\guypa\github\guypago\Python')
 import GuyHub
 import Guy_Data
-with open()
+import json
+
 
 
 # Guy's personal dictionary. Run code for instructions.
 
-milon = Guy_Data.dict2
+
+milon = json.load(open('data\dict.txt'))
 
 
 def call_dictionary_list():
@@ -87,11 +89,13 @@ def call_dictionary():
             else:
                 print("\n'" + search_key + "' doesn't exist, please select another value.\n\n")
 
-        try:
-            f = open("C:\\Users\guypa\github\guypago\PythonProject\Guy_Data.py", "w")
-            f.write("dict2 = " + str(milon))
-        finally:
-            f.close()
+        json.dump(milon,open('data\dict.txt', 'w'))
+
+        #try:
+        #    f = open("C:\\Users\guypa\github\guypago\PythonProject\Guy_Data.py", "w")
+        #    f.write("dict2 = " + str(milon))
+    #    finally:
+        #    f.close()
 
 
 
