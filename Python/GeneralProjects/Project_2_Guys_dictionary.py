@@ -2,6 +2,7 @@ import sys
 sys.path.append('C:\\Users\guypa\github\guypago\Python')
 import GuyHub
 import Guy_Data
+with open()
 
 
 # Guy's personal dictionary. Run code for instructions.
@@ -86,9 +87,11 @@ def call_dictionary():
             else:
                 print("\n'" + search_key + "' doesn't exist, please select another value.\n\n")
 
-        f = open("C:\\Users\guypa\github\guypago\PythonProject\Guy_Data.py", "w")
-        f.write("dict2 = " + str(milon))
-        f.close()
+        try:
+            f = open("C:\\Users\guypa\github\guypago\PythonProject\Guy_Data.py", "w")
+            f.write("dict2 = " + str(milon))
+        finally:
+            f.close()
 
 
 

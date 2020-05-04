@@ -52,8 +52,10 @@ multiply(list)
 
 # Factorial algorithm.
 def factorial(n):
-    if n == 1:
+    if (n == 1) | (n == 0):
         return 1
+    elif (n < 0):
+        raise ValueError('Value can\'t be nagative')
     else:
         return n * factorial(n-1)  # call a function inside itself.
 
@@ -80,4 +82,5 @@ def count(word,L):
             c+=1
     return c
 
+count('abba','b')
 # ^^^^^End^^^^^ #
