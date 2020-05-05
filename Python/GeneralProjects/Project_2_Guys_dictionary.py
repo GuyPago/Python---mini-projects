@@ -8,7 +8,7 @@ import json
 # Guy's personal dictionary. Run code for instructions.
 
 
-milon = json.load(open('data\dict.txt'))
+milon = json.load(open('GeneralProjects\data\dict.txt'))
 
 def call_dictionary_list():
     n = 1
@@ -87,7 +87,7 @@ def call_dictionary():
             else:
                 print("\n'" + search_key + "' doesn't exist, please select another value.\n\n")
 
-        json.dump(milon,open('data\dict.txt', 'w'))
+        json.dump(milon,open('GeneralProjects\data\dict.txt', 'w'))
 
         #try:
         #    f = open("C:\\Users\guypa\github\guypago\PythonProject\Guy_Data.py", "w")

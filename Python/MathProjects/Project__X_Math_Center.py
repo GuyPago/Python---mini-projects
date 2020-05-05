@@ -9,6 +9,7 @@ def mat_hub():
                            "'q' --> Back to hub\n")
         if (user_input == 'q'):
             GuyHub.back_to_hub("Guy's Math Center")
+            break
         elif (user_input == "s"):
             pass
 

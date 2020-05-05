@@ -1,7 +1,7 @@
 import time
 import sys
-sys.path.append('C:\\Users\guypa\github\guypago\Python\MathProjects')
-import Project__X_Math_Center
+sys.path.append('C:\\Users\guypa\github\guypago\Python')
+import MathProjects.Project__X_Math_Center as MP
 from GeneralProjects.Project_2_Guys_dictionary import call_dictionary
 
 def goto(place,dots=8):
@@ -15,20 +15,18 @@ def goto(place,dots=8):
         time.sleep(t)
         t -= 0.04
 
+
 def back_to_hub(place,dots=8):
     print("\nThanks for using '" + place  + "', Going back to Hub...")
-    time.sleep(0.7)
+    time.sleep(0.5)
     dot = "." * 1
     t = 0.05
     for i in range(dots):
         print(dot)
         dot += "."
         time.sleep(t)
-        t += 0.05
+        t += 0.03
     print("\n")
-
-
-
 
 
 def launch_hub():
@@ -40,7 +38,7 @@ def launch_hub():
             print("\nNot entered any value\n\n")
         elif (user_input == 'm'):
             goto("Math-Center")
-            Project__X_Math_Center.mat_hub()
+            MP.mat_hub()
         elif (user_input == 'q'):
             print("\nClosing, Bye !")
             time.sleep(1)
