@@ -109,6 +109,19 @@ def count(word,L):
         if L == i:
             c+=1
     return c
-
 count('abba','b')
+
+# Return letters as % of text.
+with open('text.txt', 'r') as f:
+    text = f.read()
+total = 0
+
+for char in string.ascii_letters + '0123456789':  #  A-Z + a-z + 0-9
+    percent = 100* count(text,char)/len(text)
+    if (percent > 0):
+        print('{} - {}%'.format(char,round(percent, 2)))
+        total += percent
+    else:
+        continue
+print(round(total,2))  # rounds number to 2 figures after '.' | round('number','figures')
 # ^^^^^End^^^^^ #
