@@ -91,15 +91,19 @@ while count < 10:  # While loop | while 'condition':
 cart = ["corn","milk","cheetos"]
 for i in cart:  # Print every list item. i starts at 0. | for i in 'list':
     print(i)
+# ^^^^^End^^^^^ #
 
 # Functions
-
-
 def f(x=0):  # defines a function | def 'func_name'(parameter='default_value')
     return x**2 + 2*x + 5  # returns a value | return 'value'
 
 y = f(7)  # Defines 'y' while x = 7
 print(y)
+
+# Lambda (anonymous) function. Same as above ^
+f_2 = lambda x: x**2 + 2*x + 5
+f_2(7)
+
 
 
 def calc(*args):  # Allows multi parameter input. | 'func_name'(*args):

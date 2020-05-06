@@ -1,19 +1,13 @@
-import string
+import speedtest as s
+from tqdm import tqdm
+import time
 
 
 
+check = s.Speedtest()
 
-with open('Python\GeneralProjects\data\dict.txt', 'r') as f:
-    text = f.read()
+download_speed = round(check.download()/(1000**2),2)
+upload_speed = round(check.upload()/(1000**2),2)
 
-def count(text,L):
-    count = 0
-    for i in text:
-        if i == L:
-            count += 1
-    return count
-
-count(text,'0')
-
-
-print(string.ascii_lowercase)
+print('''Results:\nDownload speed : {down} Mbps
+Upload speed : {up} Mbps'''.format(down=download_speed, up=upload_speed))
