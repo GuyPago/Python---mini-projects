@@ -1,4 +1,3 @@
-import time
 import sys
 sys.path.append('C:\\Users\guypa\github\guypago\Python')
 import GuyHub

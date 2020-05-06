@@ -15,6 +15,9 @@ def call_dictionary_list():
     for i,j in milon.items():
         print(str(n) + ". " + i + ":",j)
         n += 1
+def call_test():
+    for i,key,value, in enumerate(milon,1):
+        print(i,key,value, sep='')
 
 def call_dictionary():
     print("Welcome to Guy's dictionary !\n")

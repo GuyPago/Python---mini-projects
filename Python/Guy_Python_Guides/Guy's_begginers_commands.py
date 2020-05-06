@@ -12,8 +12,8 @@ print(story)
 
 
 firstLetter = name[0]  # Gets the x letter of the string. | [x]
-firstLetters = greet[0:4]  # Stores the x to y letters of the string. | [x:y]
-#  Using [-x,-y] counts [x,y] letters from the end.
+firstLetters = greet[0:4]  # Stores the x to y letters of the string with z steps. | [x:y:z]
+#  Using [-x,-y] counts [x,y] letters from the end. | [-z] counts Backwards.
 print("Your name's first letter is: " + firstLetter)
 print("Hitler is in " + firstLetters)
 
