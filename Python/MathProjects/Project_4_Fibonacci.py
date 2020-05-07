@@ -1,8 +1,7 @@
-# fibonacci serie.
+# fibonacci serie up to 'n'
 
 def fibonacci(n):
-    a1 = 0
-    a2 = 1
+    a1,a2 = 0,1
     i = 0
     print('fibonacci serie up to',str(n)+':\n')
     print(a1, end=', ')
