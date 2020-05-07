@@ -17,7 +17,7 @@ while True:
         print("the value of",user_input,"in ASCII is",str(ord(user_input)),"\n\n\n")
 # ^^^^^End^^^^^ #
 
-# Caesar cipher.
+# Caesar cipher. | ROT13 algorithm.
 str = 'Hey, how are you today?'
 str_2 = ''
 for i in str:
@@ -48,6 +48,7 @@ print("t =",t)
 print("u =",u)
 # ^^^^^End^^^^^ #
 
+
 # Backward list/string/tuple/set.
 nir = 'Betanir'
 nir_back = nir[::-1]
@@ -55,8 +56,10 @@ print(nir_back)
 
 nums = [1,2,3,4,5,6,7,8,9,10]
 print(nums[::-1])
-#  Multiplication table
+# ^^^^^End^^^^^ #
 
+
+#  Multiplication table
 x = 10
 y = 10
 
@@ -65,6 +68,7 @@ for i in range(1, y+1):   # set a range of numbers | range('start','end','jump')
         print(i * j, "\t",end="")  # set a 'tab' spacing. | '\t'
     print()  # line break at the end of the loop.
 # ^^^^^End^^^^^ #
+
 
 #  Change every list number
 def multiply(numbers):
@@ -77,6 +81,7 @@ list = [1,4,5,2,3,4,1]
 multiply(list)
 
 # ^^^^^End^^^^^ #
+
 
 # Factorial algorithm.
 def factorial(n):
@@ -92,6 +97,7 @@ print(number)
 
 # ^^^^^End^^^^^ #
 
+
 # Recursion. | Call a function in itself for a set or inf amount of time.
 def recursive_func(x):
     print(x)
@@ -99,6 +105,38 @@ def recursive_func(x):
         recursive_func(x - 1)
 
 print(recursive_func(10))
+# ^^^^^End^^^^^ #
+
+
+# Map - perform a function to every list item. | Returns an iterable.
+def add_five(x):
+    return x+5
+
+nums = [1,2,3,4,5,6,7,8,9,10]
+nums = list(map(add_five,nums))  # map('func','list') | returns an iterable, so
+# we need to convert it to list.
+
+# Or by lambda function:
+nums = list(map(lambda x: x+5,nums))
+
+# This specific example can be doen by list comprehension:
+nums = [x+5 for x in nums]
+print(nums)
+# ^^^^^End^^^^^ #
+
+
+# Filter - remove items that don't match a predicate. | Returns an iterable.
+def is_even(x):
+    return x%2 == 0
+nums = [1,2,3,4,5,6,7,8,9,10]
+nums = list(filter(is_even,nums))  # filter('func','list') | returns an iterable
+# so we need to convert it to list.
+
+#or by lambda function:
+nums = list(filter(lambda x: x%2 == 0,nums))
+print(nums)
+# This specific example can be doen by list comprehension:
+nums = [x for x in nums if x%2 ==0]
 # ^^^^^End^^^^^ #
 
 

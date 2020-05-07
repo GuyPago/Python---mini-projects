@@ -102,9 +102,12 @@ print(y)
 
 # Lambda (anonymous) function. Same as above ^
 f_2 = lambda x: x**2 + 2*x + 5
-f_2(7)
+print(f_2(7))
+print((lambda x: x**2 + 2*x + 5)(7))  # Same with one line.
 
-
+Sum = lambda x,y: x+y
+Sum(5,8)
+print((lambda x,y: x+y)(5,8))
 
 def calc(*args):  # Allows multi parameter input. | 'func_name'(*args):
     total = 0
