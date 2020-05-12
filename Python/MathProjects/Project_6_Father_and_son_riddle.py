@@ -54,7 +54,7 @@ def try_sum():
 
 
 # Another solution by generator function
-def quest_2(sum=5555):
+def quest_2(sum=555):
     father = [i for i in range(1,sum+1)]
     son = father.copy()
 
@@ -62,6 +62,7 @@ def quest_2(sum=5555):
         for v in son:
             if (i + v == sum) and (i == int(str(v)[::-1])) and (i > v):
                 yield i,v
+
 
 def try_sum2():
     while True:

@@ -83,18 +83,17 @@ multiply(list)
 # ^^^^^End^^^^^ #
 
 
-# Factorial algorithm.
+# Recursion - call a function in itself.  --> Factorial function:
 def factorial(n):
+    assert n>=0, 'Value must be positive' # Demand n >=0, if false, raise error.
+    assert round(n)==n, 'Value must be integer'
     if (n == 1) | (n == 0):  # '|' == 'or'
         return 1
-    elif (n < 0):
-        raise ValueError('Value can\'t be nagative')
     else:
-        return n * factorial(n-1)  # call a function inside itself.
+        return n * factorial(n-1)  #  Recursion.
 
 number = factorial(5)
 print(number)
-
 # ^^^^^End^^^^^ #
 
 

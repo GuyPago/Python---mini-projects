@@ -131,3 +131,18 @@ degreesInput = input("Enter celsius degrees: ")
 degrees = toFahrenheit(int(degreesInput))
 print(degreesInput + " degrees celsius are " + str(degrees)
                    + " degrees Fahrenheit")  # continuation line break
+
+
+# Decorators. | Used to 'wrap' an existing function with added stuff.
+
+def decor(func):  # Create a decorator. | def 'dec_name'('func')
+    def wrap():  # Defines the original function, after decoration.
+        print('===========')
+        func()
+        print('===========')
+    return wrap  # Returnes the decorated function
+
+
+@decor
+def hello(name='Guy'):
+    print('Hello',name,'!')
