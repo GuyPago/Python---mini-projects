@@ -50,3 +50,42 @@ manager_1 = Managers('Guy','Taggar',37233)
 
 manager_1.add_emp(emp_1)
 manager_1.print_emps()
+
+class Vector3D:
+    def __init__(self,x,y,z):
+        self.x = x
+        self.y = y
+        self.z = z
+
+    def __truediv__(self,other):
+        return Vector3D(self.x/other.x, self.y/other.y, self.z/other.z)
+
+    @classmethod
+    def vector_str(cls,string):
+        x,y,z = string.split('-')
+        try:
+            return cls(float(x),float(y),float(z))
+        except ValueError:
+            print('Error!\nvalues must be numbers')
+
+
+d = Vector3D.vector_str('5-7-2')
+a = Vector3D(2,3,4)
+b = Vector3D(8,6,8)
+c = b/a
+
+f = Vector3D.vector_str('5-2-4')
+
+
+
+# class Vector2D:
+#     def __init__(self,x,y):
+#         self.x = x
+#         self.y = y
+#     def __sub__(self,other):
+#         return Vector2D(self.x - other.x, self.y - other.y)
+#
+# first = Vector2D(5,2)
+# second = Vector2D(2,4)
+# result = first - second
+# print(result.x,result.y,sep = '   ')
