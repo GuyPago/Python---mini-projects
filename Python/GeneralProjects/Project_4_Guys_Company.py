@@ -1,15 +1,16 @@
 # Guy's company project.
-
+import operator
 class Employee:
     raise_amount = 1.03
     staff = []
     emp_n = 0
 
-    def __init__(self,first,last,pay,under=None):
+    def __init__(self,first,last,pay=20,lv=1,under=None):
         self.first = first
         self.last = last
         self.email = first + '.' + last + '@pago-corp.com'
         self.pay = pay
+        self.lv = lv
         Employee.emp_n += 1
         Employee.staff.append(self)
         try:
@@ -17,11 +18,23 @@ class Employee:
         except :
             pass
 
+    def __lt__(self,other):
+        return self.lv < other.lv
+
+
     @classmethod
     def print_workers(cls):
+
         print('Pago-Corp industries {}s: '.format(cls.__name__))
-        for c, emp in enumerate(cls.staff,1):
+        for c, emp in enumerate(sorted(cls.staff,reverse=True),1):
             print(c, '. ', emp.fullname(),' - ',emp.__class__.__name__ ,sep='')
+        print('\n')
+
+    @classmethod
+    def print_salaries(cls):
+        print('Pago-Corp industries salaries for {}s: '.format(cls.__name__))
+        for emp in sorted(cls.staff,key=lambda x: x.pay, reverse=True):
+            print(emp.fullname(),'-',emp.pay)
         print('\n')
 
     def fullname(self):
@@ -34,8 +47,8 @@ class Manager(Employee):
     staff = []
     emp_n = 0
     raise_amount = 1.1
-    def __init__(self,first,last,pay,employees=None):
-        super().__init__(first,last,pay)
+    def __init__(self,first,last,pay=400,employees=None,lv=5):
+        super().__init__(first,last,pay,lv)
         if employees is None:
             self.employees = []
         else:
@@ -67,8 +80,8 @@ class Manager(Employee):
 class CEO(Manager):
     staff = []
     emp_n = 0
-    def __init__(self,first,last,pay,employees=Employee.staff):
-        super().__init__(first, last, pay)
+    def __init__(self,first,last,pay=150000,lv=10,employees=Employee.staff):
+        Employee.__init__(self,first, last, pay, lv)
         self.employees = [worker for worker in employees if worker.__class__.__name__ != 'CEO']
         self.staff.append(self)
         CEO.emp_n += 1
@@ -78,8 +91,8 @@ class Developer(Employee):
     emp_n = 0
     raise_amount = 1.06
 
-    def __init__(self,first,last,pay,prog_lang=None):
-        super().__init__(first, last, pay)
+    def __init__(self,first,last,pay,prog_lang=None,lv=3):
+        super().__init__(first, last, pay, lv)
         self.prog_lang = prog_lang
         self.staff.append(self)
         Developer.emp_n+=1
@@ -87,20 +100,24 @@ class Developer(Employee):
 
 
 
-
 dev_1 = Developer('Betanir','Taggar',12500,'C#')
 emp_1 = Employee('Yulia','Kartsev',7500)
-manager_2 = Manager('Ram','Taggar',27000,[dev_1,emp_1])
+manager_1 = Manager('Ram','Taggar',27000,[dev_1,emp_1])
 emp_3 = Developer('Ido','Ashkenazi',11000,'java')
-CEO_1 = CEO('Guy','Taggar',37233)
-emp_2 = Employee('test','yes',1000,manager_2)
+CEO_1 = CEO('Guy','Taggar',lv=100)
+emp_2 = Employee('Test','Employee',1000,under=manager_1)
+CEO_2 = CEO('Yaniv','Kenz')
+# Employee.print_workers()
+# Developer.print_workers()
+# Manager.print_workers()
+# manager_2.print_emps()
+# CEO_1.print_emps()
+
+
+
 Employee.print_workers()
-Developer.print_workers()
-Manager.print_workers()
-
-
-
-manager_2.print_emps()
-CEO_1.print_emps()
-
-print(manager_2.__class__.__name__)
+Employee.print_salaries()
+emp_1.apply_raise()
+Employee.print_salaries()
+emp_1.apply_raise()
+Employee.print_salaries()
