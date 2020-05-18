@@ -40,12 +40,16 @@ class Employee:
     def fullname(self):
         return '{} {}'.format(self.first, self.last)
 
-    def apply_raise(self,perc=None,bonus=None):
-        if perc is None and bonus is None:
+    def apply_raise(self,perc=0,bonus=0):
+        if (perc == 0) and (bonus == 0):
             self.pay = int(self.pay * self.raise_amount)
         else:
             try:
-                self.pay = (self.pay + bonus) *
+                self.pay = int((self.pay + bonus) * (1 + perc/100))
+            except TypeError:
+                print('Error!\nRaise for {} failed!'.format(self.first)
+                        + '\nNot entered a numeric value\n')
+
 
 class Manager(Employee):
     staff = []
@@ -123,5 +127,5 @@ CEO_2 = CEO('Yaniv','Kenz')
 Employee.print_workers()
 Employee.print_salaries()
 emp_1.apply_raise()
-CEO_1.apply_raise()
+CEO_1.apply_raise('s')
 Employee.print_salaries()
