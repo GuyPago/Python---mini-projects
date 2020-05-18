@@ -40,8 +40,12 @@ class Employee:
     def fullname(self):
         return '{} {}'.format(self.first, self.last)
 
-    def apply_raise(self):
-        self.pay = int(self.pay * self.raise_amount)
+    def apply_raise(self,perc=None,bonus=None):
+        if perc is None and bonus is None:
+            self.pay = int(self.pay * self.raise_amount)
+        else:
+            try:
+                self.pay = (self.pay + bonus) *
 
 class Manager(Employee):
     staff = []
@@ -80,6 +84,7 @@ class Manager(Employee):
 class CEO(Manager):
     staff = []
     emp_n = 0
+    raise_amount = 1.1
     def __init__(self,first,last,pay=150000,lv=10,employees=Employee.staff):
         Employee.__init__(self,first, last, pay, lv)
         self.employees = [worker for worker in employees if worker.__class__.__name__ != 'CEO']
@@ -118,6 +123,5 @@ CEO_2 = CEO('Yaniv','Kenz')
 Employee.print_workers()
 Employee.print_salaries()
 emp_1.apply_raise()
-Employee.print_salaries()
-emp_1.apply_raise()
+CEO_1.apply_raise()
 Employee.print_salaries()
