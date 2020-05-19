@@ -22,9 +22,12 @@ class Employee:
 
     def fire(self):
         self.lv = 0
-        self.emp_n -= 1
 
 
+    @classmethod
+    def print_emp_num(cls):
+        n = len(list(filter(lambda x: x.lv !=0,cls.staff)))
+        print('Pago-Corp is currently hiring {} {}s.'.format(n,cls.__name__))
 
     @classmethod
     def print_workers(cls,dimos=False):
@@ -61,13 +64,6 @@ class Employee:
             except TypeError:
                 print('Error!\nRaise for {} failed!'.format(self.first)
                         + '\nNot entered a numeric value\n')
-
-# class former(Employee):
-#     def __init__(self,first,last,pay=20,lv=0,under=None,role=None):
-#         super().__init__(first,last,pay,lv,under)
-#         self.role = role
-#         Employee.staff.remove(self)
-
 
 class Manager(Employee):
     staff = []
