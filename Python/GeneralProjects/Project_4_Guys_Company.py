@@ -14,13 +14,8 @@ emp_2 = Employee('Yana','Lizrazon',5000,under=manager_2)
 CEO_2 = CEO('Yaniv','Kenz')
 
 
+Developer.print_workers()
 
-print('Employees = {}'.format(Employee.emp_n))
-Developer.print_workers()
-print(Developer.emp_n)
-print(Employee.emp_n)
 dev_1.fire()
-print(Developer.emp_n)
-print(Employee.emp_n)
 Developer.print_workers()
-CEO.print_emp_num()
+CEO.print_emp_n()
