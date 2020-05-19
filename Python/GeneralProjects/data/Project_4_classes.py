@@ -16,15 +16,28 @@ class Employee:
         except :
             pass
 
+
     def __lt__(self,other):
         return self.lv < other.lv
 
+    def fire(self):
+        self.lv = 0
+        self.emp_n -= 1
+
+
 
     @classmethod
-    def print_workers(cls):
+    def print_workers(cls,dimos=False):
+        if dimos is True:
+            former = ' former'
+            emp_filter = lambda x: x.lv == 0
+        else:
+            former = ''
+            emp_filter = lambda x: x.lv != 0
 
-        print('Pago-Corp industries {}s: '.format(cls.__name__))
-        for c, emp in enumerate(sorted(cls.staff,reverse=True),1):
+
+        print('Pago-Corp industries{} {}s: '.format(former,cls.__name__))
+        for c, emp in enumerate(sorted(filter(emp_filter,cls.staff),reverse=True),1):
             print(c, '. ', emp.fullname(),' - ',emp.__class__.__name__ ,sep='')
         print('\n')
 
@@ -34,6 +47,7 @@ class Employee:
         for emp in sorted(cls.staff,key=lambda x: x.pay, reverse=True):
             print(emp.fullname(),'-',emp.pay)
         print('\n')
+
 
     def fullname(self):
         return '{} {}'.format(self.first, self.last)
@@ -47,6 +61,13 @@ class Employee:
             except TypeError:
                 print('Error!\nRaise for {} failed!'.format(self.first)
                         + '\nNot entered a numeric value\n')
+
+# class former(Employee):
+#     def __init__(self,first,last,pay=20,lv=0,under=None,role=None):
+#         super().__init__(first,last,pay,lv,under)
+#         self.role = role
+#         Employee.staff.remove(self)
+
 
 class Manager(Employee):
     staff = []
