@@ -26,13 +26,8 @@ class Employee:
         print('Pago-Corp is currently hiring {} {}s.'.format(n,cls.__name__))
 
     @classmethod
-    def print_workers(cls,dimos=False):
-        if dimos is True:
-            former = ' former'
-            emp_filter = lambda x: x.lv == 0
-        else:
-            former = ''
-            emp_filter = lambda x: x.lv != 0
+    def print_workers(cls,dimus=False):
+        former,emp_filter = cls.is_worker(dimus)
 
         print('Pago-Corp industries{} {}s: '.format(former,cls.__name__))
         for c, emp in enumerate(sorted(filter(emp_filter,cls.staff),reverse=True),1):
@@ -40,11 +35,23 @@ class Employee:
         print('\n')
 
     @classmethod
-    def print_salaries(cls):
-        print('Pago-Corp industries salaries for {}s: '.format(cls.__name__))
-        for emp in sorted(cls.staff,key=lambda x: x.pay, reverse=True):
+    def print_salaries(cls,dimus=False):
+        former,emp_filter = cls.is_worker(dimus)
+
+        print('Pago-Corp industries salaries for {}{}s: '.format(former,cls.__name__))
+        for emp in sorted(filter(emp_filter,cls.staff),key=lambda x: x.pay, reverse=True):
             print(emp.fullname(),'-',emp.pay)
         print('\n')
+
+    @staticmethod
+    def is_worker(dimus):
+        if dimus is True:
+                former = ' former'
+                emp_filter = lambda x: x.lv == 0
+        else:
+                former = ''
+                emp_filter = lambda x: x.lv != 0
+        return former,emp_filter
 
     def fullname(self):
         return '{} {}'.format(self.first, self.last)
@@ -54,16 +61,25 @@ class Employee:
             self.pay = int(self.pay * self.raise_amount)
         else:
             try:
-                self.pay = int((self.pay + bonus) * (1 + perc/100))
+                self.pay = int(self.pay * (1 + perc/100) + bonus)
             except TypeError:
                 print('Error!\nRaise for {} failed!'.format(self.first)
                         + '\nNot entered a numeric value\n')
+
+class Developer(Employee):
+    staff = []
+    raise_amount = 1.06
+
+    def __init__(self,first,last,pay,prog_lang=None,lv=3):
+        super().__init__(first, last, pay, lv)
+        self.prog_lang = prog_lang
+        self.staff.append(self)
 
 class Manager(Employee):
     staff = []
     raise_amount = 1.07
 
-    def __init__(self,first,last,pay=400,employees=None,lv=5):
+    def __init__(self,first,last,pay=1000,employees=None,lv=5):
         super().__init__(first,last,pay,lv)
         if employees is None:
             self.employees = []
@@ -81,14 +97,16 @@ class Manager(Employee):
 
     def print_emps(self):
         if self.__class__.__name__ == 'CEO':
-            employees = [i for i in Employee.staff if i.__class__.__name__!='CEO']
+            employees = [i for i in Employee.staff if i.__class__.__name__!='CEO' and i.lv!=0]
             print(self.first,'\'s Employees :',sep='')
             for c,i in enumerate(employees,1):
-                print(c,'. ',i.fullname(),sep='')
+                print('{}. {} - {}'.format(c,i.fullname(),i.__class__.__name__))
             print('\n')
+        elif len(list(filter(lambda x: x.lv!=0,self.employees))) == 0:
+            print('{} doesn\'t have employees.\n'.format(self.first))
         else:
             print(self.first,'\'s Employees :',sep='')
-            for c,i in enumerate(self.employees,1):
+            for c,i in enumerate(list(filter(lambda x: x.lv!=0,self.employees)),1):
                 print(c,'. ',i.fullname(),sep='')
             print('\n')
 
@@ -99,13 +117,4 @@ class CEO(Manager):
     def __init__(self,first,last,pay=150000,lv=10,employees=Employee.staff):
         Employee.__init__(self,first, last, pay, lv)
         self.employees = [worker for worker in employees if worker.__class__.__name__ != 'CEO']
-        self.staff.append(self)
-
-class Developer(Employee):
-    staff = []
-    raise_amount = 1.06
-
-    def __init__(self,first,last,pay,prog_lang=None,lv=3):
-        super().__init__(first, last, pay, lv)
-        self.prog_lang = prog_lang
         self.staff.append(self)

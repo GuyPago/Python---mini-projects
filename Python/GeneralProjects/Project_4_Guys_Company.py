@@ -14,8 +14,10 @@ emp_2 = Employee('Yana','Lizrazon',5000,under=manager_2)
 CEO_2 = CEO('Yaniv','Kenz')
 
 
-Developer.print_workers()
 
+manager_1.print_emps()
 dev_1.fire()
-Developer.print_workers()
-CEO.print_emp_n()
+dev_1.print_salaries()
+manager_1.print_emps()
+dev_1.apply_raise(bonus = 7000)
+Employee.print_workers()
