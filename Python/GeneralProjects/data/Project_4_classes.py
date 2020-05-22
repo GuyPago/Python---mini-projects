@@ -25,16 +25,17 @@ class Employee:
 
     @classmethod
     def fire_rand(cls):
-        if cls.__name__.startswith(('E','A','I','O','U')):
-            a = 'an'
-        else:
-            a = 'a'
-        emp = cls.staff[randint(0,len(cls.staff)-1)]
-        i = 0
-        print('Trying to fire {} {}..'.format(a,cls.__name__))
+        print('Trying to fire a random {}..'.format(cls.__name__))
         time.sleep(1.5)
+        pool = list(filter(lambda x: x.lv!=0,cls.staff))
+        try:
+            emp = pool[randint(0,len(pool)-1)]
+        except ValueError:
+            print('Failed!\nThere are no {}s in Pago-Corp\n'.format(cls.__name__))
+            return None
+        i = 0
         while emp.lv >= 5 and i < 1000:
-            emp = cls.staff[randint(0,len(cls.staff)-1)]
+            emp = pool[randint(0,len(pool)-1)]
             i+=1
         if i == 1000:
             print('Failed!\nNo {} was fired, all have permanence.\n'.format(cls.__name__))
@@ -108,7 +109,7 @@ class Manager(Developer):
     staff = []
     raise_amount = 1.07
 
-    def __init__(self,first,last,pay=1000,prog_lang=None,employees=None,lv=5):
+    def __init__(self,first,last,pay=1000,prog_lang=None,employees=None,lv=4):
         super().__init__(first,last,pay,prog_lang,lv)
         if employees is None:
             self.employees = []
