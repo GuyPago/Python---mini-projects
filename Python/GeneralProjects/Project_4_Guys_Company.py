@@ -1,5 +1,4 @@
 # Guy's company project.
-import operator
 from data.Project_4_classes import *
 
 
@@ -16,12 +15,21 @@ CEO_2 = CEO('Yaniv','Kenz')
 
 
 
-dev_1.apply_raise(70,700000)
+dev_1.apply_raise(70,5000)
 Employee.print_workers()
+# Developer.fire_rand()
+# print(CEO_1.hire_date)
+# print(CEO_2.hire_date)
+# print(CEO_1.hire_date < CEO_2.hire_date)
+manager_1.fire()
+time.sleep(2)
+CEO_2.fire()
+time.sleep(1)
 Developer.fire_rand()
-Developer.fire_rand()
-Developer.fire_rand()
-Employee.fire_rand()
+# Developer.fire_rand()
+# Employee.fire_rand()
+# Employee.print_workers()
+# CEO_1.fire()
 Employee.print_workers()
-Employee.print_workers(dimus=True)
-dev_1.lv = 6
+Employee.print_workers(dimus='all')
+# print(manager_1.fire_date)

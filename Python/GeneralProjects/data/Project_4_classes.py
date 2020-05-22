@@ -1,4 +1,5 @@
 from random import randint
+import datetime
 import time
 class Employee:
     raise_amount = 1.03
@@ -11,6 +12,8 @@ class Employee:
         self.email = first + '.' + last + '@pago-corp.com'
         self.pay = pay
         self.lv = lv
+        self.hire_date = datetime.datetime.now()
+        self.fire_date = None
         Employee.staff.append(self)
         try:
             under.employees.append(self)
@@ -22,6 +25,8 @@ class Employee:
 
     def fire(self):
         self.lv = 0
+        self.fire_date = datetime.datetime.now()
+        print('{} was fired.\n'.format(self.fullname))
 
     @classmethod
     def fire_rand(cls):
@@ -40,8 +45,8 @@ class Employee:
         if i == 1000:
             print('Failed!\nNo {} was fired, all have permanence.\n'.format(cls.__name__))
         else:
-            emp.lv = 0
-            print('Success!\n{} was fired.\n'.format(emp.fullname))
+            print('Success!')
+            emp.fire()
 
     @classmethod
     def print_emp_n(cls):
@@ -53,8 +58,11 @@ class Employee:
         former,emp_filter = cls.is_worker(dimus)
 
         print('Pago-Corp industries {}{}s: '.format(former,cls.__name__))
-        for c, emp in enumerate(sorted(filter(emp_filter,cls.staff),reverse=True),1):
-            print(c, '. ', emp.fullname,' - ',emp.__class__.__name__ ,sep='')
+        for c, emp in enumerate(sorted(filter(emp_filter,cls.staff),key=lambda x:(x.lv,x.fire_date),reverse=True),1):
+            if emp.fire_date is None:
+                print('{}. {} - {}'.format(c,emp.fullname,emp.__class__.__name__))
+            else:
+                print('{}. {} - {},  fire date - [{} at {}]'.format(c,emp.fullname,emp.__class__.__name__,emp.fire_date.strftime('%x'),emp.fire_date.strftime('%X')))
         print('\n')
 
     @classmethod
