@@ -1,6 +1,9 @@
+from random import randint
+import time
 class Employee:
     raise_amount = 1.03
     staff = []
+
 
     def __init__(self,first,last,pay=20,lv=1,under=None):
         self.first = first
@@ -21,6 +24,25 @@ class Employee:
         self.lv = 0
 
     @classmethod
+    def fire_rand(cls):
+        if cls.__name__.startswith(('E','A','I','O','U')):
+            a = 'an'
+        else:
+            a = 'a'
+        emp = cls.staff[randint(0,len(cls.staff)-1)]
+        i = 0
+        print('Trying to fire {} {}..'.format(a,cls.__name__))
+        time.sleep(1.5)
+        while emp.lv >= 5 and i < 1000:
+            emp = cls.staff[randint(0,len(cls.staff)-1)]
+            i+=1
+        if i == 1000:
+            print('Failed!\nNo {} was fired, all have permanence.\n'.format(cls.__name__))
+        else:
+            emp.lv = 0
+            print('Success!\n{} was fired.\n'.format(emp.fullname))
+
+    @classmethod
     def print_emp_n(cls):
         n = len(list(filter(lambda x: x.lv !=0,cls.staff)))
         print('Pago-Corp is currently hiring {} {}s.'.format(n,cls.__name__))
@@ -29,9 +51,9 @@ class Employee:
     def print_workers(cls,dimus=False):
         former,emp_filter = cls.is_worker(dimus)
 
-        print('Pago-Corp industries{} {}s: '.format(former,cls.__name__))
+        print('Pago-Corp industries {}{}s: '.format(former,cls.__name__))
         for c, emp in enumerate(sorted(filter(emp_filter,cls.staff),reverse=True),1):
-            print(c, '. ', emp.fullname(),' - ',emp.__class__.__name__ ,sep='')
+            print(c, '. ', emp.fullname,' - ',emp.__class__.__name__ ,sep='')
         print('\n')
 
     @classmethod
@@ -40,19 +62,26 @@ class Employee:
 
         print('Pago-Corp industries salaries for {}{}s: '.format(former,cls.__name__))
         for emp in sorted(filter(emp_filter,cls.staff),key=lambda x: x.pay, reverse=True):
-            print(emp.fullname(),'-',emp.pay)
+            print(emp.fullname,'-',emp.pay)
         print('\n')
 
     @staticmethod
     def is_worker(dimus):
         if dimus is True:
-                former = ' former'
+                former = 'former '
                 emp_filter = lambda x: x.lv == 0
-        else:
+        elif dimus is False:
                 former = ''
                 emp_filter = lambda x: x.lv != 0
+        elif dimus == 'all':
+                former = '(current & former) '
+                emp_filter = None
+        else:
+            raise ValueError('dimus must be True,False, or \'all\'')
+
         return former,emp_filter
 
+    @property
     def fullname(self):
         return '{} {}'.format(self.first, self.last)
 
@@ -75,12 +104,12 @@ class Developer(Employee):
         self.prog_lang = prog_lang
         self.staff.append(self)
 
-class Manager(Employee):
+class Manager(Developer):
     staff = []
     raise_amount = 1.07
 
-    def __init__(self,first,last,pay=1000,employees=None,lv=5):
-        super().__init__(first,last,pay,lv)
+    def __init__(self,first,last,pay=1000,prog_lang=None,employees=None,lv=5):
+        super().__init__(first,last,pay,prog_lang,lv)
         if employees is None:
             self.employees = []
         else:
