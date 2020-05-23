@@ -13,4 +13,8 @@ emp_2 = Employee('Yana','Lizrazon',5000,under=manager_2)
 CEO_2 = CEO('Yaniv','Kenz')
 
 
+
+dev_1.fire()
 Employee.fire_rand()
+
+Employee.print_workers('all')

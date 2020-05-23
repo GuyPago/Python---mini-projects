@@ -3,11 +3,6 @@ import datetime
 import time
 
 
-def dots(dot=3,t=0.5):
-    for i in range(dot):
-        print('.',end='',flush=True)
-        time.sleep(t)
-
 
 class Employee:
     raise_amount = 1.03
@@ -44,15 +39,17 @@ class Employee:
         print('Giving {} a raise'.format(self.fullname),end='')
         dots()
         if (perc == 0) and (bonus == 0):
-            self.pay = int(self.pay * self.raise_amount)
-        else:
-            try:
-                old_pay = self.pay
-                self.pay = int(self.pay * (1 + perc/100) + bonus)
-                print('\nSuccess !\n{}\'s salary was set from {} to {}.\n'.format(self.first,old_pay,self.pay))
-            except TypeError:
-                print('\nError!\nRaise for {} failed - '.format(self.first)
-                        + 'not entered a valid raise value.\n')
+            perc = (self.raise_amount-1)*100
+        #     self.pay = int(self.pay * self.raise_amount)
+        # else:
+        try:
+            old_pay = self.pay
+            self.pay = int(self.pay * (1 + perc/100) + bonus)
+            print('\nSuccess !\n{}\'s salary was set from {} to {}.\n'
+                                       .format(self.first,old_pay,self.pay))
+        except TypeError:
+            print('\nError!\nRaise for {} failed - '.format(self.first)
+                    + 'not entered a valid raise value.\n')
     @classmethod
     def fire_rand(cls):
         print('Trying to fire a random {}'.format(cls.__name__),end='',flush=True)
@@ -68,7 +65,8 @@ class Employee:
             emp = pool[randint(0,len(pool)-1)]
             i+=1
         if i == 1000:
-            print('Failed!\nNo {} was fired, all have permanence.\n'.format(cls.__name__))
+            print('Failed!\nNo {} was fired, all have permanence.\n'
+                                                          .format(cls.__name__))
         else:
             print('\nSuccess!')
             emp.fire()
@@ -83,19 +81,24 @@ class Employee:
         former,emp_filter = cls.is_worker(dimus)
 
         print('Pago-Corp industries {}{}s: '.format(former,cls.__name__))
-        for c, emp in enumerate(sorted(filter(emp_filter,cls.staff),key=lambda x:(x.lv,x.fire_date),reverse=True),1):
+        for c, emp in enumerate(sorted(filter(emp_filter,cls.staff),
+                               key=lambda x:(x.lv,x.fire_date),reverse=True),1):
             if emp.fire_date is None:
                 print('{}. {} - {}'.format(c,emp.fullname,emp.__class__.__name__))
             else:
-                print('{}. {} - {},  unemployment date -> [{} at {}]'.format(c,emp.fullname,emp.__class__.__name__,emp.fire_date.strftime('%x'),emp.fire_date.strftime('%X')))
+                print('{}. {} - {},  unemployment date -> [{} at {}]'
+                    .format(c,emp.fullname,emp.__class__.__name__,emp.fire_date
+                                  .strftime('%x'),emp.fire_date.strftime('%X')))
         print('\n')
 
     @classmethod
     def print_salaries(cls,dimus=False):
         former,emp_filter = cls.is_worker(dimus)
 
-        print('Pago-Corp industries salaries for {}{}s: '.format(former,cls.__name__))
-        for emp in sorted(filter(emp_filter,cls.staff),key=lambda x: x.pay, reverse=True):
+        print('Pago-Corp industries salaries for {}{}s: '
+                                                   .format(former,cls.__name__))
+        for emp in sorted(filter(emp_filter,cls.staff),
+                                             key=lambda x: x.pay, reverse=True):
             print(emp.fullname,'-',emp.pay)
         print('\n')
 
@@ -146,17 +149,19 @@ class Manager(Developer):
 
     def print_emps(self):
         if self.__class__.__name__ == 'CEO':
-            employees = [i for i in Employee.staff if i.__class__.__name__!='CEO' and i.lv!=0]
+            employees = [i for i in Employee.staff if
+                                        i.__class__.__name__!='CEO' and i.lv!=0]
+
             print(self.first,'\'s Employees :',sep='')
             for c,i in enumerate(employees,1):
-                print('{}. {} - {}'.format(c,i.fullname(),i.__class__.__name__))
+                print('{}. {} - {}'.format(c,i.fullname,i.__class__.__name__))
             print('\n')
         elif len(list(filter(lambda x: x.lv!=0,self.employees))) == 0:
             print('{} doesn\'t have employees.\n'.format(self.first))
         else:
             print(self.first,'\'s Employees :',sep='')
             for c,i in enumerate(list(filter(lambda x: x.lv!=0,self.employees)),1):
-                print(c,'. ',i.fullname(),sep='')
+                print(c,'. ',i.fullname,sep='')
             print('\n')
 
 class CEO(Manager):
@@ -165,5 +170,16 @@ class CEO(Manager):
 
     def __init__(self,first,last,pay=150000,lv=10,employees=Employee.staff):
         Employee.__init__(self,first, last, pay, lv)
-        self.employees = [worker for worker in employees if worker.__class__.__name__ != 'CEO']
+        self.employees = [worker for worker in employees if
+                                            worker.__class__.__name__ != 'CEO']
         self.staff.append(self)
+
+
+
+
+
+# Useful functions:
+def dots(dot=3,t=0.5):
+    for i in range(dot):
+        print('.',end='',flush=True)
+        time.sleep(t)
