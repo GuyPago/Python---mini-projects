@@ -1,6 +1,14 @@
 from random import randint
 import datetime
 import time
+
+
+def dots(dot=3,t=0.5):
+    for i in range(dot):
+        print('.',end='',flush=True)
+        time.sleep(t)
+
+
 class Employee:
     raise_amount = 1.03
     staff = []
@@ -23,15 +31,32 @@ class Employee:
     def __lt__(self,other):
         return self.lv < other.lv
 
+    @property
+    def fullname(self):
+        return '{} {}'.format(self.first, self.last)
+
     def fire(self):
         self.lv = 0
         self.fire_date = datetime.datetime.now()
         print('{} was fired.\n'.format(self.fullname))
 
+    def apply_raise(self,perc=0,bonus=0):
+        print('Giving {} a raise'.format(self.fullname),end='')
+        dots()
+        if (perc == 0) and (bonus == 0):
+            self.pay = int(self.pay * self.raise_amount)
+        else:
+            try:
+                old_pay = self.pay
+                self.pay = int(self.pay * (1 + perc/100) + bonus)
+                print('\nSuccess !\n{}\'s salary was set from {} to {}.\n'.format(self.first,old_pay,self.pay))
+            except TypeError:
+                print('\nError!\nRaise for {} failed - '.format(self.first)
+                        + 'not entered a valid raise value.\n')
     @classmethod
     def fire_rand(cls):
-        print('Trying to fire a random {}..'.format(cls.__name__))
-        time.sleep(1.5)
+        print('Trying to fire a random {}'.format(cls.__name__),end='',flush=True)
+        dots()
         pool = list(filter(lambda x: x.lv!=0,cls.staff))
         try:
             emp = pool[randint(0,len(pool)-1)]
@@ -45,7 +70,7 @@ class Employee:
         if i == 1000:
             print('Failed!\nNo {} was fired, all have permanence.\n'.format(cls.__name__))
         else:
-            print('Success!')
+            print('\nSuccess!')
             emp.fire()
 
     @classmethod
@@ -62,7 +87,7 @@ class Employee:
             if emp.fire_date is None:
                 print('{}. {} - {}'.format(c,emp.fullname,emp.__class__.__name__))
             else:
-                print('{}. {} - {},  fire date - [{} at {}]'.format(c,emp.fullname,emp.__class__.__name__,emp.fire_date.strftime('%x'),emp.fire_date.strftime('%X')))
+                print('{}. {} - {},  unemployment date -> [{} at {}]'.format(c,emp.fullname,emp.__class__.__name__,emp.fire_date.strftime('%x'),emp.fire_date.strftime('%X')))
         print('\n')
 
     @classmethod
@@ -89,20 +114,6 @@ class Employee:
             raise ValueError('dimus must be True,False, or \'all\'')
 
         return former,emp_filter
-
-    @property
-    def fullname(self):
-        return '{} {}'.format(self.first, self.last)
-
-    def apply_raise(self,perc=0,bonus=0):
-        if (perc == 0) and (bonus == 0):
-            self.pay = int(self.pay * self.raise_amount)
-        else:
-            try:
-                self.pay = int(self.pay * (1 + perc/100) + bonus)
-            except TypeError:
-                print('Error!\nRaise for {} failed!'.format(self.first)
-                        + '\nNot entered a numeric value\n')
 
 class Developer(Employee):
     staff = []
