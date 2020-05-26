@@ -13,8 +13,25 @@ emp_2 = Employee('Yana','Lizrazon',5000,under=manager_2)
 CEO_2 = CEO('Yaniv','Kenz')
 
 
+# dev_1.fire()
+# Employee.fire_rand()
+# Employee.print_workers('all')
 
-dev_1.fire()
-Employee.fire_rand()
 
-Employee.print_workers('all')
+
+
+def panel():
+    cls=Employee
+    flag = True
+    while flag:
+        dict = {'d':dots,'h':panel_help,'l':cls.print_workers,'w':cls.print_salaries,
+                'q':quit,'f':cls.fire}
+        x=input('Hello to \'Pago-corp industries\' HR panel.  Enter \'h\' for help\n')
+        if x in dict.keys():
+            print(''); dict[x]()
+        elif x=='c':
+            cls=what_class()
+        elif x=='q':
+            break
+        else:
+            print('Error\nNot entered a valid value.\n')

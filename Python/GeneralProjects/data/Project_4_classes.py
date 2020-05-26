@@ -1,15 +1,18 @@
 from random import randint
 import datetime
 import time
+import sys,inspect
+
 
 
 
 class Employee:
     raise_amount = 1.03
     staff = []
-
+    i = 1
 
     def __init__(self,first,last,pay=20,lv=1,under=None):
+        self.id = Employee.i
         self.first = first
         self.last = last
         self.email = first + '.' + last + '@pago-corp.com'
@@ -18,6 +21,7 @@ class Employee:
         self.hire_date = datetime.datetime.now()
         self.fire_date = None
         Employee.staff.append(self)
+        Employee.i += 1
         try:
             under.employees.append(self)
         except :
@@ -122,8 +126,8 @@ class Developer(Employee):
     staff = []
     raise_amount = 1.06
 
-    def __init__(self,first,last,pay,prog_lang=None,lv=3):
-        super().__init__(first, last, pay, lv)
+    def __init__(self,first,last,pay,prog_lang=None,lv=3,id=0):
+        super().__init__(first, last, pay, lv,id)
         self.prog_lang = prog_lang
         self.staff.append(self)
 
@@ -132,7 +136,7 @@ class Manager(Developer):
     raise_amount = 1.07
 
     def __init__(self,first,last,pay=1000,prog_lang=None,employees=None,lv=4):
-        super().__init__(first,last,pay,prog_lang,lv)
+        super().__init__(first,last,pay,prog_lang,lv,id)
         if employees is None:
             self.employees = []
         else:
@@ -169,7 +173,7 @@ class CEO(Manager):
     raise_amount = 1.1
 
     def __init__(self,first,last,pay=150000,lv=10,employees=Employee.staff):
-        Employee.__init__(self,first, last, pay, lv)
+        Employee.__init__(self,first, last, pay, lv, id)
         self.employees = [worker for worker in employees if
                                             worker.__class__.__name__ != 'CEO']
         self.staff.append(self)
@@ -179,7 +183,30 @@ class CEO(Manager):
 
 
 # Useful functions:
+emp_types = inspect.getmembers(sys.modules[__name__], inspect.isclass)
+
+
 def dots(dot=3,t=0.5):
     for i in range(dot):
         print('.',end='',flush=True)
         time.sleep(t)
+
+def what_class():
+    dict2={}
+    print('What class?')
+    for i,v in enumerate(emp_types,1):
+        dict2[i] = v[1]
+        print(i,'. ',v[0],'s',sep='')
+    c = int(input('') or 3)
+    return dict2[c]
+
+
+def panel_help():
+    print("""Navigation:
+'c' -> Choose worker department (default = All)
+'l' -> Print labor force.
+'w' -> Print wages.
+'f' -> Fire a worker.
+'q' -> Quit.
+
+    """)
