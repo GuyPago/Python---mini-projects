@@ -4,7 +4,7 @@ import Project_4_Guys_Company
 import glob
 import re
 from data.pics import *
-from tkinter import messagebox
+from tkinter import messagebox,simpledialog
 def find_emps():
     e.delete(0,'end')
     list = [(i.id, i.fullname) for i in Employee.staff if i.lv!=0]
@@ -34,6 +34,9 @@ def search_command(event=None):
 
 def app_raise():
     try:
+
+        simpledialog.askfloat('how much?','hey',maxvalue=500,parent=list_box)
+
         click = list_box.curselection()
         id = list_box.get(click)
         emp = list(filter(lambda x:x.lv!=0 and x.id==int(id[0]),Employee.staff))[0]
