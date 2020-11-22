@@ -3,7 +3,7 @@
 #########################################
 # Question 1 - do not delete this comment
 #########################################
-number = ???  # Replace ??? with an appropriate command to get a number from the user.
+number = '???'  # Replace '???' with an appropriate command to get a number from the user.
 # Write the rest of the code for question 1 below here.
 
 
@@ -11,7 +11,7 @@ number = ???  # Replace ??? with an appropriate command to get a number from the
 #########################################
 # Question 2 - do not delete this comment
 #########################################
-number = ???  # Replace ??? with an appropriate command to get a number from the user.
+number = '???'  # Replace '???' with an appropriate command to get a number from the user.
 # Write the rest of the code for question 2 below here.
 
 
@@ -19,7 +19,7 @@ number = ???  # Replace ??? with an appropriate command to get a number from the
 #########################################
 # Question 3 - do not delete this comment
 #########################################
-grade = ???  # Replace ??? with an integer of your choice.
+grade = '???'  # Replace '???' with an integer of your choice.
 # Write the rest of the code for question 3 below here.
 
 
@@ -27,7 +27,7 @@ grade = ???  # Replace ??? with an integer of your choice.
 #########################################
 # Question 4 - do not delete this comment
 #########################################
-my_str = ???  # Replace ??? with a string of your choice.
+my_str = '???'  # Replace '???' with a string of your choice.
 # Write the rest of the code for question 4 below here.
 
 
