@@ -1,0 +1,1348 @@
+#LyX 2.3 created this file. For more info see http://www.lyx.org/
+\lyxformat 544
+\begin_document
+\begin_header
+\save_transient_properties true
+\origin unavailable
+\textclass heb-article
+\begin_preamble
+\usepackage{culmus}
+\end_preamble
+\use_default_options true
+\maintain_unincluded_children false
+\language hebrew
+\language_package default
+\inputencoding auto
+\fontencoding global
+\font_roman "default" "default"
+\font_sans "default" "default"
+\font_typewriter "default" "default"
+\font_math "auto" "auto"
+\font_default_family default
+\use_non_tex_fonts false
+\font_sc false
+\font_osf false
+\font_sf_scale 100 100
+\font_tt_scale 100 100
+\use_microtype false
+\use_dash_ligatures true
+\graphics default
+\default_output_format default
+\output_sync 0
+\bibtex_command default
+\index_command default
+\paperfontsize default
+\spacing single
+\use_hyperref false
+\papersize default
+\use_geometry false
+\use_package amsmath 1
+\use_package amssymb 1
+\use_package cancel 1
+\use_package esint 1
+\use_package mathdots 1
+\use_package mathtools 1
+\use_package mhchem 1
+\use_package stackrel 1
+\use_package stmaryrd 1
+\use_package undertilde 1
+\cite_engine basic
+\cite_engine_type default
+\biblio_style plain
+\use_bibtopic false
+\use_indices false
+\paperorientation portrait
+\suppress_date true
+\justification true
+\use_refstyle 1
+\use_minted 0
+\index Index
+\shortcut idx
+\color #008000
+\end_index
+\secnumdepth 3
+\tocdepth 3
+\paragraph_separation indent
+\paragraph_indentation default
+\is_math_indent 0
+\math_numbering_side default
+\quotes_style english
+\dynamic_quotes 0
+\papercolumns 1
+\papersides 1
+\paperpagestyle default
+\tracking_changes false
+\output_changes false
+\html_math_output 0
+\html_css_as_file 0
+\html_be_strict false
+\end_header
+
+\begin_body
+
+\begin_layout Standard
+\begin_inset FormulaMacro
+\newcommand{\ub}[1]{\underbrace{#1}}
+{\underbrace{#1}}
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset FormulaMacro
+\newcommand{\ua}[1]{\underset{#1}{\Rightarrow}}
+{\underset{#1}{\Rightarrow}}
+\end_inset
+
+
+\begin_inset FormulaMacro
+\newcommand{\limto}[1]{\underset{x\rightarrow#1}{\lim}}
+{\underset{x\rightarrow#1}{\lim}}
+\end_inset
+
+
+\begin_inset FormulaMacro
+\newcommand{\aol}{\underset{AOL}{=}}
+{\underset{AOL}{=}}
+\end_inset
+
+
+\end_layout
+
+\begin_layout Title
+חשבון אינפיניטסימלי
+\family roman
+\series medium
+\shape up
+\size largest
+\emph off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+ 
+\family default
+\series default
+\shape default
+\size default
+\emph default
+\numeric on
+\bar default
+\strikeout default
+\xout default
+\uuline default
+\uwave default
+\noun default
+\color inherit
+1
+\family roman
+\series medium
+\shape up
+\size largest
+\emph off
+\numeric off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+ - תרגיל 
+\family default
+\series default
+\shape default
+\size default
+\emph default
+\bar default
+\strikeout default
+\xout default
+\uuline default
+\uwave default
+\noun default
+\color inherit
+\lang english
+5
+\end_layout
+
+\begin_layout Author
+גיא תגר
+\family roman
+\series medium
+\shape up
+\size large
+\emph off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+ 
+\family default
+\series default
+\shape default
+\size default
+\emph default
+\bar default
+\strikeout default
+\xout default
+\uuline default
+\uwave default
+\noun default
+\color inherit
+- קבוצה
+\family roman
+\series medium
+\shape up
+\size large
+\emph off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+ 
+\family default
+\series default
+\shape default
+\size default
+\emph default
+\numeric on
+\bar default
+\strikeout default
+\xout default
+\uuline default
+\uwave default
+\noun default
+\color inherit
+2
+\end_layout
+
+\begin_layout Section
+שאלה
+\family roman
+\series bold
+\shape up
+\size larger
+\emph off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+ 
+\family default
+\series default
+\shape default
+\size default
+\emph default
+\numeric on
+\bar default
+\strikeout default
+\xout default
+\uuline default
+\uwave default
+\noun default
+\color inherit
+1
+\numeric off
+.
+\end_layout
+
+\begin_layout Enumerate
+יהי 
+\begin_inset Formula $\varepsilon>0$
+\end_inset
+
+.
+ ניקח 
+\begin_inset Formula $\boxed{\delta=\min\left\{ 1,6\varepsilon\right\} }$
+\end_inset
+
+ כך שלכל 
+\begin_inset Formula $0<\left|x-3\right|<\delta$
+\end_inset
+
+ מתקיים:
+\begin_inset Formula 
+\[
+\ub{\left|\left|2-\frac{1}{x}\right|-\frac{5}{3}\right|}=\left|\left|2-\frac{1}{x}\right|-\left|\frac{5}{3}\right|\right|\overset{\Delta_{2}}{\le}\left|2-\frac{1}{x}-\frac{5}{3}\right|=\left|\frac{1}{3}-\frac{1}{x}\right|=\left|\frac{x-3}{3x}\right|=
+\]
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+\frac{\left|x-3\right|}{\left|3x\right|}\ub <\delta\cdot\frac{1}{\left|3x\right|}\underset{*}{\le}\frac{\delta}{6}\le\ub{\varepsilon}
+\]
+
+\end_inset
+
+* נשים לב ש:
+\begin_inset Formula 
+\[
+\left|x-3\right|<\delta\iff3-\delta<x<3+\delta
+\]
+
+\end_inset
+
+נכפיל ב
+\numeric on
+3
+\numeric off
+, עבור 
+\begin_inset Formula $\delta\le1$
+\end_inset
+
+:
+\begin_inset Formula 
+\[
+6<3x<12
+\]
+
+\end_inset
+
+ניתן לראות שהביטוי חיובי בתחום ולכן 
+\begin_inset Formula $3x=\left|3x\right|$
+\end_inset
+
+ ונוכל לומר ש:
+\begin_inset Formula 
+\[
+\frac{1}{\left|3x\right|}<\frac{1}{6}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+יהי 
+\begin_inset Formula $\varepsilon>0$
+\end_inset
+
+.
+ ניקח 
+\begin_inset Formula $\boxed{\delta=\min\left\{ 1,\frac{5\varepsilon}{8}\right\} }$
+\end_inset
+
+ כך שלכל 
+\begin_inset Formula $0<\left|x+3\right|<\delta$
+\end_inset
+
+ מתקיים:
+\begin_inset Formula 
+\[
+\left|\frac{x^{2}-5x}{x-3}+4\right|=\left|\frac{x^{2}-5x+4x-12}{x-3}\right|=\left|\frac{x^{2}-x-12}{x-3}\right|=\left|\frac{\left(x+3\right)\left(x-4\right)}{x-3}\right|=
+\]
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+\frac{\left|x+3\right|\left|x-4\right|}{\left|x-3\right|}<\delta\cdot\frac{\left|x-4\right|}{\left|x-3\right|}\underset{*}{\le}\frac{8\delta}{\left|x-3\right|}\underset{**}{\le}\frac{8}{5}\delta\le\varepsilon
+\]
+
+\end_inset
+
+ * מתקיים:
+\begin_inset Formula 
+\[
+\left|x-4\right|=\left|x+3-7\right|\overset{\Delta}{\le}\left|x+3\right|+7<\delta+7\underset{\delta\le1}{\le}8
+\]
+
+\end_inset
+
+ ** מתקיים:
+\begin_inset Formula 
+\[
+\left|x+3\right|<\delta\iff-\delta<x+3<\delta\ua{-6}
+\]
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+-7\underset{\delta\le1}{\le}-\delta-6<x-3<\delta-6\underset{\delta\le1}{\le}-5
+\]
+
+\end_inset
+
+ניתן לראות שהביטוי שלילי בתחום ולכן 
+\begin_inset Formula $\left|x-3\right|=-\left(x-3\right)$
+\end_inset
+
+.
+ נכפיל במינוס אחד ונקבל:
+\begin_inset Formula 
+\[
+5\le\left|x-3\right|=-\left(x-3\right)\le7\Rightarrow
+\]
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+\frac{1}{\left|x-3\right|}\le\frac{1}{5}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section
+שאלה
+\family roman
+\series bold
+\shape up
+\size larger
+\emph off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+ 
+\family default
+\series default
+\shape default
+\size default
+\emph default
+\numeric on
+\bar default
+\strikeout default
+\xout default
+\uuline default
+\uwave default
+\noun default
+\color inherit
+2
+\numeric off
+.
+\end_layout
+
+\begin_layout Enumerate
+: 
+\begin_inset Formula 
+\[
+\limto 2\frac{\sqrt{2x^{2}+8}-4}{\left(x-2\right)\left(x^{2}+2x+4\right)}=\limto 2\frac{\sqrt{2x^{2}+8}-4}{\left(x-2\right)\left(x^{2}+2x+4\right)}\cdot\frac{\sqrt{2x^{2}+8}+4}{\sqrt{2x^{2}+8}+4}=
+\]
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+\limto 2\frac{2\left(x^{2}-4\right)}{\left(\sqrt{2x^{2}+8}+4\right)\left(x-2\right)\left(x^{2}+2x+4\right)}=\limto 2\frac{2\cancel{\left(x-2\right)}\left(x+2\right)}{\left(\sqrt{2x^{2}+8}+4\right)\cancel{\left(x-2\right)}\left(x^{2}+2x+4\right)}=
+\]
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+\limto 2\frac{2\left(x+2\right)}{\left(\sqrt{2x^{2}+8}+4\right)\left(x^{2}+2x+4\right)}\underset{AOL}{=}\frac{\cancel{8}}{\cancel{8}\cdot12}=\frac{1}{12}
+\]
+
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+:
+\begin_inset Formula 
+\[
+\limto 1\left(\frac{2}{1-x^{2}}-\frac{3}{1-x^{3}}\right)=\limto 1\left(\frac{2}{\left(1-x\right)\left(1+x\right)}-\frac{3}{\left(1-x\right)\left(1+x+x^{2}\right)}\right)=
+\]
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+\limto 1\frac{2\left(1+x+x^{2}\right)-3\left(1+x\right)}{\left(1-x\right)\left(1+x\right)\left(1+x+x^{2}\right)}=\limto 1\frac{2+2x+2x^{2}-3-3x}{\left(1-x\right)\left(1+x\right)\left(1+x+x^{2}\right)}=
+\]
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+\limto 1\frac{2x^{2}-x-1}{\left(1-x\right)\left(1+x\right)\left(1+x+x^{2}\right)}=\limto 1\frac{\left(2x+1\right)\left(x-1\right)}{\left(1-x\right)\left(1+x\right)\left(1+x+x^{2}\right)}=
+\]
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+\limto 1\frac{-\left(2x+1\right)\cancel{\left(1-x\right)}}{\cancel{\left(1-x\right)}\left(1+x\right)\left(1+x+x^{2}\right)}=\limto 1\frac{-\left(2x+1\right)}{\left(1+x\right)\left(1+x+x^{2}\right)}\underset{AOL}{=}-\frac{3}{2\cdot3}=-\frac{1}{2}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+:
+\begin_inset Formula 
+\[
+\limto{-\infty}\left(\sqrt{4x^{2}-6x}-\sqrt{4x^{2}-8x}\right)=\limto{-\infty}\left(\frac{\left(4x^{2}-6x\right)-\left(4x^{2}-8x\right)}{\sqrt{4x^{2}-6x}+\sqrt{4x^{2}-8x}}\right)=
+\]
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+\limto{-\infty}\frac{2x}{\sqrt{4x^{2}-6x}+\sqrt{4x^{2}-8x}}=\limto{-\infty}\frac{2x}{2\left|x\right|\sqrt{1-\frac{1.5}{x}}+2\left|x\right|\sqrt{1-\frac{2}{x}}}\underset{x<M<0}{=}
+\]
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+\limto{-\infty}\frac{\cancel{2x}}{-\cancel{2x}\sqrt{1-\frac{1.5}{x}}-\cancel{2x}\sqrt{1-\frac{2}{x}}}=\limto{-\infty}\frac{1}{-\left(\sqrt{1-\frac{1.5}{x}}+\sqrt{1-\frac{2}{x}}\right)}\underset{AOL}{=}-\frac{1}{2}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section
+שאלה
+\family roman
+\series bold
+\shape up
+\size larger
+\emph off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+ 
+\family default
+\series default
+\shape default
+\size default
+\emph default
+\numeric on
+\bar default
+\strikeout default
+\xout default
+\uuline default
+\uwave default
+\noun default
+\color inherit
+3
+\numeric off
+.
+\end_layout
+
+\begin_layout Standard
+תהי 
+\begin_inset Formula $A\subseteq\mathbb{R}$
+\end_inset
+
+ ויהיו 
+\begin_inset Formula $a,b\in\mathbb{R}$
+\end_inset
+
+.
+ נניח ש 
+\begin_inset Formula $A,\mathbb{R\backslash}A$
+\end_inset
+
+ צפופות ב 
+\begin_inset Formula $\mathbb{R}$
+\end_inset
+
+ וש 
+\begin_inset Formula $a\ne b$
+\end_inset
+
+.
+ תהי 
+\begin_inset Formula $f:\mathbb{R\rightarrow R}$
+\end_inset
+
+ מוגדרת ע
+\begin_inset Quotes erd
+\end_inset
+
+י:
+\begin_inset Formula 
+\[
+f\left(x\right)=\begin{cases}
+a & x\in A\\
+b & x\notin A
+\end{cases}
+\]
+
+\end_inset
+
+נראה ש 
+\begin_inset Formula $\limto{\infty}f\left(x\right)$
+\end_inset
+
+לא קיים.
+\begin_inset Newline newline
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+נניח בשלילה שקיים 
+\begin_inset Formula $L\in\mathbb{R}$
+\end_inset
+
+ כך ש 
+\begin_inset Formula $\limto{\infty}f\left(x\right)=L$
+\end_inset
+
+.
+ לכן קיים 
+\begin_inset Formula $M>0$
+\end_inset
+
+ כך שלכל 
+\begin_inset Formula $x>M$
+\end_inset
+
+ מתקיים:
+\begin_inset Formula 
+\[
+\left|f\left(x\right)-L\right|<\boxed{\frac{\left|a-b\right|}{2}}
+\]
+
+\end_inset
+
+נשים לב ש 
+\begin_inset Formula $\varepsilon\ne0$
+\end_inset
+
+ מכיוון ש 
+\begin_inset Formula $a\ne b$
+\end_inset
+
+.
+\begin_inset Newline newline
+\end_inset
+
+מהצפיפות של 
+\begin_inset Formula $A$
+\end_inset
+
+ ב 
+\begin_inset Formula $\mathbb{R}$
+\end_inset
+
+, קיים 
+\begin_inset Formula $M<x_{1}\in A$
+\end_inset
+
+ כך ש:
+\begin_inset Formula 
+\[
+\left|f\left(x_{1}\right)-L\right|=\left|a-L\right|<\frac{\left|a-b\right|}{2}
+\]
+
+\end_inset
+
+מהצפיפות של 
+\begin_inset Formula $\mathbb{R}\backslash A$
+\end_inset
+
+ ב 
+\begin_inset Formula $\mathbb{R}$
+\end_inset
+
+, קיים 
+\begin_inset Formula $M<x_{2}\notin A$
+\end_inset
+
+ כך ש:
+\begin_inset Formula 
+\[
+\left|f\left(x_{2}\right)-L\right|=\left|b-L\right|<\frac{\left|a-b\right|}{2}
+\]
+
+\end_inset
+
+אבל:
+\begin_inset Formula 
+\[
+\ub{\left|a-b\right|}=\left|\left(a-L\right)+\left(L-b\right)\right|\overset{\Delta}{\le}\left|a-L\right|+\left|b-L\right|\ub <\frac{\left|a-b\right|}{2}+\frac{\left|a-b\right|}{2}=\ub{\left|a-b\right|}
+\]
+
+\end_inset
+
+סתירה.
+\begin_inset Newline newline
+\end_inset
+
+☺
+\end_layout
+
+\begin_layout Section
+שאלה
+\family roman
+\series bold
+\shape up
+\size larger
+\emph off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+ 
+\family default
+\series default
+\shape default
+\size default
+\emph default
+\numeric on
+\bar default
+\strikeout default
+\xout default
+\uuline default
+\uwave default
+\noun default
+\color inherit
+4
+\numeric off
+.
+\end_layout
+
+\begin_layout Enumerate
+
+\series bold
+טענה:
+\series default
+ 
+\begin_inset Formula $\limto{x_{0}}f\left(x\right)=L$
+\end_inset
+
+ אם ורק אם לכל 
+\begin_inset Formula $0\ne\alpha\in\mathbb{R}$
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+
+\begin_inset Formula $\limto{x_{0}}\left[\alpha\cdot f\left(x\right)\right]=\alpha\cdot L$
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+
+\bar under
+הטענה נכונה
+\bar default
+.
+\begin_inset Newline newline
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+
+\begin_inset Formula $\left(\Leftarrow\right)$
+\end_inset
+
+ נניח ש 
+\begin_inset Formula $\limto{x_{0}}f\left(x\right)=L$
+\end_inset
+
+.
+ מהיות 
+\begin_inset Formula $\alpha$
+\end_inset
+
+ קבוע, מתקיים 
+\begin_inset Formula $\limto{x_{0}}\alpha=\alpha$
+\end_inset
+
+ לפי אש
+\begin_inset Quotes erd
+\end_inset
+
+ג בסיס.
+ מתקיים:
+\begin_inset Formula 
+\[
+\ub{\limto{x_{0}}\left[\alpha\cdot f\left(x\right)\right]}\aol\limto{x_{0}}\alpha\cdot\limto{x_{0}}f\left(x\right)\underset{AOL}{\ub =}\ub{\alpha\cdot L}
+\]
+
+\end_inset
+
+
+\begin_inset Formula $\left(\Rightarrow\right)$
+\end_inset
+
+ נניח ש 
+\begin_inset Formula $\limto{x_{0}}\left[\alpha\cdot f\left(x\right)\right]=\alpha\cdot L$
+\end_inset
+
+.
+ מתקיים:
+\begin_inset Formula 
+\[
+\limto{x_{0}}f\left(x\right)\underset{\alpha\ne0}{=}\limto{x_{0}}\left[\frac{\alpha\cdot f\left(x\right)}{\alpha}\right]\aol\frac{\limto{x_{0}}\left[\alpha\cdot f\left(x\right)\right]}{\limto{x_{0}}\alpha}\aol\frac{\cancel{\alpha}L}{\cancel{\alpha}}\ub =L
+\]
+
+\end_inset
+
+☺
+\end_layout
+
+\begin_layout Enumerate
+
+\series bold
+טענה:
+\series default
+ אם 
+\begin_inset Formula $\limto{x_{0}}\left[f\left(x\right)+g\left(x\right)\right]=L$
+\end_inset
+
+ אזי 
+\begin_inset Formula $\limto{x_{0}}f\left(x\right),\limto{x_{0}}g\left(x\right)$
+\end_inset
+
+ קיימים
+\begin_inset Newline newline
+\end_inset
+
+או 
+\begin_inset Formula $\limto{x_{0}}f\left(x\right),\limto{x_{0}}g\left(x\right)$
+\end_inset
+
+ לא קיימים.
+\begin_inset Newline newline
+\end_inset
+
+
+\bar under
+הטענה נכונה
+\bar default
+.
+\begin_inset Newline newline
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+נניח בשלילה, בלי הגבלת הכלליות ש 
+\begin_inset Formula $\limto{x_{0}}f\left(x\right)=L_{1}$
+\end_inset
+
+ ו 
+\begin_inset Formula $\limto{x_{0}}g\left(x\right)$
+\end_inset
+
+ לא קיים.
+ )כלומר אחד הגבולות קיים והשני לא קיים(.
+ נשים לב ש:
+\begin_inset Formula 
+\[
+\ub{\limto{x_{0}}g\left(x\right)=}\limto{x_{0}}\left[g\left(x\right)+f\left(x\right)-f\left(x\right)\right]\aol
+\]
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+\limto{x_{0}}\left[g\left(x\right)+f\left(x\right)\right]-\limto{x_{0}}f\left(x\right)\aol\ub{L-L_{1}}
+\]
+
+\end_inset
+
+בסתירה לכך ש 
+\begin_inset Formula $\limto{x_{0}}g\left(x\right)$
+\end_inset
+
+ לא קיים.
+\begin_inset Newline newline
+\end_inset
+
+☺
+\begin_inset Newline newline
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+
+\series bold
+טענה:
+\series default
+ תהי 
+\begin_inset Formula $h:\mathbb{R\rightarrow R}$
+\end_inset
+
+.
+ אם 
+\begin_inset Formula $\limto ah\left(x\right)=L$
+\end_inset
+
+ לכל 
+\begin_inset Formula $a\in\mathbb{R}$
+\end_inset
+
+, אזי 
+\begin_inset Formula $h\left(x\right)=L$
+\end_inset
+
+ לכל 
+\begin_inset Formula $x\in\mathbb{R}$
+\end_inset
+
+.
+\begin_inset Newline newline
+\end_inset
+
+
+\bar under
+הטענה לא נכונה
+\bar default
+.
+\begin_inset Newline newline
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+נרצה לחפש פונקציה קבועה עם נקודת אי רציפות, ויחד עם זאת מוגדרת לכל 
+\begin_inset Formula $x\in\mathbb{R}$
+\end_inset
+
+.
+\begin_inset Newline newline
+\end_inset
+
+דוגמה נגדית - יהיו 
+\begin_inset Formula $x,a\in\mathbb{R}$
+\end_inset
+
+.
+ ניקח את הפונקצייה:
+\begin_inset Formula 
+\[
+h\left(x\right)=\begin{cases}
+1 & x\ne a\\
+2 & x=a
+\end{cases}
+\]
+
+\end_inset
+
+ברור שתחום ההגדרה הוא 
+\begin_inset Formula $\mathbb{R}$
+\end_inset
+
+.
+ מאש
+\begin_inset Quotes erd
+\end_inset
+
+ג בסיס, לכל 
+\begin_inset Formula $a\in\mathbb{R}$
+\end_inset
+
+ מתקיים:
+\begin_inset Formula 
+\[
+\limto ah\left(x\right)\underset{*}{=}\limto a1\aol1
+\]
+
+\end_inset
+
+*מכיוון ש-
+\begin_inset Formula $x$
+\end_inset
+
+ נמצא בסביבה מנוקבת של 
+\begin_inset Formula $a$
+\end_inset
+
+, אזי 
+\begin_inset Formula $x\ne a$
+\end_inset
+
+.
+\begin_inset Newline newline
+\end_inset
+
+אבל עבור 
+\begin_inset Formula $x=a$
+\end_inset
+
+:
+\begin_inset Formula 
+\[
+h\left(a\right)=2\ne1=L
+\]
+
+\end_inset
+
+קיבלנו ש 
+\begin_inset Formula $\limto ah\left(x\right)=1$
+\end_inset
+
+ לכל 
+\begin_inset Formula $a\in\mathbb{R}$
+\end_inset
+
+ אבל קיים 
+\begin_inset Formula $x\in\mathbb{R}$
+\end_inset
+
+ כך ש 
+\begin_inset Formula $h\left(x\right)\ne1$
+\end_inset
+
+.
+ 
+\begin_inset Newline newline
+\end_inset
+
+☺
+\end_layout
+
+\begin_layout Section
+שאלה
+\family roman
+\series bold
+\shape up
+\size larger
+\emph off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+ 
+\family default
+\series default
+\shape default
+\size default
+\emph default
+\numeric on
+\bar default
+\strikeout default
+\xout default
+\uuline default
+\uwave default
+\noun default
+\color inherit
+5
+\numeric off
+.
+\end_layout
+
+\begin_layout Standard
+תהי 
+\begin_inset Formula $f:\mathbb{R\rightarrow R}$
+\end_inset
+
+ ויהי 
+\begin_inset Formula $m\in\mathbb{R}$
+\end_inset
+
+.
+ נסתכל על הקבוצה:
+\begin_inset Formula 
+\[
+A=\left\{ x\in[a,b)\mid f\left(x\right)>m\right\} 
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+נניח ש 
+\begin_inset Formula $A\ne\phi$
+\end_inset
+
+ ונראה ש 
+\begin_inset Formula $\underline{s}=\inf\left(A\right)$
+\end_inset
+
+ קיים וכי 
+\begin_inset Formula $a\le\underline{s}<b$
+\end_inset
+
+.
+\begin_inset Newline newline
+\end_inset
+
+מהגדרת הקבוצה נובע שהיא חסומה מלרע ע
+\begin_inset Quotes erd
+\end_inset
+
+י 
+\begin_inset Formula $a$
+\end_inset
+
+ )הוא לא בהכרח המינימום מכיוון שיש תנאי נוסף(.
+ בנוסף הקבוצה לא ריקה ולכן על פי משפט החסם התחתון )הוכחנו בעבר( יש לה אינפימום,
+ כלומר קיים 
+\begin_inset Formula $\inf\left(A\right)=\underline{s}$
+\end_inset
+
+.
+\begin_inset Newline newline
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+מהיות 
+\begin_inset Formula $\underline{s}$
+\end_inset
+
+ החסם מלרע המקסימלי ומהיות 
+\begin_inset Formula $a$
+\end_inset
+
+ חסם מלרע, מתקיים:
+\begin_inset Formula 
+\[
+a\le\underline{s}
+\]
+
+\end_inset
+
+בנוסף 
+\begin_inset Formula $b$
+\end_inset
+
+ חסם מלעיל של 
+\begin_inset Formula $A$
+\end_inset
+
+ )הוא בהכרח לא המקסימום מכיוון שהוא לא שייך לקבוצה ללא תלות בתנאי הנוסף(
+ ולכן מתקיים:
+\begin_inset Formula 
+\[
+a\le\underline{s}<b
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+יהי 
+\begin_inset Formula $L\in\mathbb{R}$
+\end_inset
+
+ ונניח ש 
+\begin_inset Formula $\limto{\underline{s}}f\left(x\right)=L$
+\end_inset
+
+.
+ נוכיח כי 
+\begin_inset Formula $L\ge m$
+\end_inset
+
+.
+\begin_inset Newline newline
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+נניח בשלילה ש 
+\begin_inset Formula $L<m$
+\end_inset
+
+.
+ נשים לב שזה גורר 
+\begin_inset Formula $m-L>0$
+\end_inset
+
+.
+ מהיות 
+\begin_inset Formula $L$
+\end_inset
+
+ גבול של 
+\begin_inset Formula $f$
+\end_inset
+
+ ב 
+\begin_inset Formula $\underline{s}$
+\end_inset
+
+, קיים 
+\begin_inset Formula $\delta_{1}>0$
+\end_inset
+
+ כך שלכל 
+\begin_inset Formula $0<\left|x-\underline{s}\right|<\delta_{1}$
+\end_inset
+
+, מתקיים:
+\begin_inset Formula 
+\[
+\left|f\left(x\right)-L\right|<\boxed{m-L}\iff
+\]
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+L-\left(m-L\right)<f\left(x\right)<L+\left(m-L\right)
+\]
+
+\end_inset
+
+ובפרט:
+\begin_inset Formula 
+\[
+f\left(x\right)<m
+\]
+
+\end_inset
+
+וזו סתירה.
+ אפרט מדוע:
+\begin_inset Newline newline
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+נתון ש 
+\begin_inset Formula $\underline{s}\notin A$
+\end_inset
+
+ וש 
+\begin_inset Formula $A$
+\end_inset
+
+ אינה קבוצה ריקה.
+\begin_inset Newline newline
+\end_inset
+
+מתכונת האפסילון של החסם התחתון, קיים 
+\begin_inset Formula $x_{1}\in A$
+\end_inset
+
+ כך ש:
+\begin_inset Formula 
+\[
+x_{1}<\underline{s}+\boxed{\delta_{1}}
+\]
+
+\end_inset
+
+מכיוון ש 
+\begin_inset Formula $\underline{s}\notin A$
+\end_inset
+
+, מתקיים:
+\begin_inset Formula 
+\[
+x_{1}>\underline{s}
+\]
+
+\end_inset
+
+כלומר קיבלנו ש:
+\begin_inset Formula 
+\[
+x_{1}\in\left(\underline{s},\underline{s}+\delta_{1}\right)
+\]
+
+\end_inset
+
+זה גם אומר בפרט ש:
+\begin_inset Formula 
+\[
+x_{1}\in\left(\underline{s}-\delta_{1},\underline{s}+\delta_{1}\right)\backslash\left\{ \underline{s}\right\} \iff0<\left|x_{1}-\underline{s}\right|<\delta_{1}
+\]
+
+\end_inset
+
+לפיכך מהנחת השלילה שלנו מתקיים:
+\begin_inset Formula 
+\[
+f\left(x_{1}\right)<m
+\]
+
+\end_inset
+
+אבל 
+\begin_inset Formula $x_{1}\in A$
+\end_inset
+
+ )ראינו(, לכן הוא מקיים:
+\begin_inset Formula 
+\[
+f\left(x_{1}\right)>m
+\]
+
+\end_inset
+
+כאמור, סתירה.
+\begin_inset Newline newline
+\end_inset
+
+☺
+\end_layout
+
+\end_body
+\end_document
