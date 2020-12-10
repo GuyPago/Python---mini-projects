@@ -43,6 +43,4 @@ def log10_list(lst4):
 # Question 5 - do not delete this comment
 #########################################
 def is_palindrom(s5):
-    # return s5 == s5[::-1]
-    n=len(s5)
-    print(s5[])
+    return s5 == s5[::-1]
