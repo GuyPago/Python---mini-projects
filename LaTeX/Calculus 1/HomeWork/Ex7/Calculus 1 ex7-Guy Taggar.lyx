@@ -1,0 +1,1344 @@
+#LyX 2.3 created this file. For more info see http://www.lyx.org/
+\lyxformat 544
+\begin_document
+\begin_header
+\save_transient_properties true
+\origin unavailable
+\textclass heb-article
+\begin_preamble
+\usepackage{culmus}
+\end_preamble
+\use_default_options true
+\maintain_unincluded_children false
+\language hebrew
+\language_package default
+\inputencoding auto
+\fontencoding global
+\font_roman "default" "default"
+\font_sans "default" "default"
+\font_typewriter "default" "default"
+\font_math "auto" "auto"
+\font_default_family default
+\use_non_tex_fonts false
+\font_sc false
+\font_osf false
+\font_sf_scale 100 100
+\font_tt_scale 100 100
+\use_microtype false
+\use_dash_ligatures true
+\graphics default
+\default_output_format default
+\output_sync 0
+\bibtex_command default
+\index_command default
+\paperfontsize default
+\spacing single
+\use_hyperref false
+\papersize default
+\use_geometry false
+\use_package amsmath 1
+\use_package amssymb 1
+\use_package cancel 1
+\use_package esint 1
+\use_package mathdots 1
+\use_package mathtools 1
+\use_package mhchem 1
+\use_package stackrel 1
+\use_package stmaryrd 1
+\use_package undertilde 1
+\cite_engine basic
+\cite_engine_type default
+\biblio_style plain
+\use_bibtopic false
+\use_indices false
+\paperorientation portrait
+\suppress_date true
+\justification true
+\use_refstyle 1
+\use_minted 0
+\index Index
+\shortcut idx
+\color #008000
+\end_index
+\secnumdepth 3
+\tocdepth 3
+\paragraph_separation indent
+\paragraph_indentation default
+\is_math_indent 0
+\math_numbering_side default
+\quotes_style english
+\dynamic_quotes 0
+\papercolumns 1
+\papersides 1
+\paperpagestyle default
+\tracking_changes false
+\output_changes false
+\html_math_output 0
+\html_css_as_file 0
+\html_be_strict false
+\end_header
+
+\begin_body
+
+\begin_layout Standard
+\begin_inset FormulaMacro
+\newcommand{\ub}[1]{\underbrace{#1}}
+{\underbrace{#1}}
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset FormulaMacro
+\newcommand{\ua}[1]{\underset{#1}{\Rightarrow}}
+{\underset{#1}{\Rightarrow}}
+\end_inset
+
+
+\begin_inset FormulaMacro
+\newcommand{\limto}[1]{\underset{x\rightarrow#1}{\lim}}
+{\underset{x\rightarrow#1}{\lim}}
+\end_inset
+
+
+\begin_inset FormulaMacro
+\newcommand{\aol}{\underset{AOL}{=}}
+{\underset{AOL}{=}}
+\end_inset
+
+
+\end_layout
+
+\begin_layout Title
+חשבון אינפיניטסימלי
+\family roman
+\series medium
+\shape up
+\size largest
+\emph off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+ 
+\family default
+\series default
+\shape default
+\size default
+\emph default
+\numeric on
+\bar default
+\strikeout default
+\xout default
+\uuline default
+\uwave default
+\noun default
+\color inherit
+1
+\family roman
+\series medium
+\shape up
+\size largest
+\emph off
+\numeric off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+ - תרגיל 
+\family default
+\series default
+\shape default
+\size default
+\emph default
+\bar default
+\strikeout default
+\xout default
+\uuline default
+\uwave default
+\noun default
+\color inherit
+\lang english
+7
+\end_layout
+
+\begin_layout Author
+גיא תגר
+\family roman
+\series medium
+\shape up
+\size large
+\emph off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+ 
+\family default
+\series default
+\shape default
+\size default
+\emph default
+\numeric on
+\bar default
+\strikeout default
+\xout default
+\uuline default
+\uwave default
+\noun default
+\color inherit
+206260762
+\family roman
+\series medium
+\shape up
+\size large
+\emph off
+\numeric off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+ 
+\family default
+\series default
+\shape default
+\size default
+\emph default
+\bar default
+\strikeout default
+\xout default
+\uuline default
+\uwave default
+\noun default
+\color inherit
+- קבוצה
+\family roman
+\series medium
+\shape up
+\size large
+\emph off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+ 
+\family default
+\series default
+\shape default
+\size default
+\emph default
+\numeric on
+\bar default
+\strikeout default
+\xout default
+\uuline default
+\uwave default
+\noun default
+\color inherit
+2
+\end_layout
+
+\begin_layout Section
+שאלה
+\family roman
+\series bold
+\shape up
+\size larger
+\emph off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+ 
+\family default
+\series default
+\shape default
+\size default
+\emph default
+\numeric on
+\bar default
+\strikeout default
+\xout default
+\uuline default
+\uwave default
+\noun default
+\color inherit
+1
+\numeric off
+.
+\end_layout
+
+\begin_layout Standard
+תהי 
+\begin_inset Formula $f:\mathbb{R\rightarrow R}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $f$
+\end_inset
+
+ אינה חסומה אם לכל 
+\begin_inset Formula $M\in\mathbb{R}$
+\end_inset
+
+ קיים 
+\begin_inset Formula $x\in\mathbb{R}$
+\end_inset
+
+ כך ש 
+\begin_inset Formula $\left|f\left(x\right)\right|>M$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $\limto{-\infty}f\left(x\right)$
+\end_inset
+
+ אינו 
+\begin_inset Formula $-\infty$
+\end_inset
+
+ אם קיים 
+\begin_inset Formula $K<0$
+\end_inset
+
+ כך שלכל 
+\begin_inset Formula $M<0$
+\end_inset
+
+ קיים 
+\begin_inset Formula $x<M$
+\end_inset
+
+ כך ש:
+\begin_inset Formula 
+\[
+f\left(x\right)\ge K
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section
+שאלה
+\family roman
+\series bold
+\shape up
+\size larger
+\emph off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+ 
+\family default
+\series default
+\shape default
+\size default
+\emph default
+\numeric on
+\bar default
+\strikeout default
+\xout default
+\uuline default
+\uwave default
+\noun default
+\color inherit
+2
+\numeric off
+.
+\end_layout
+
+\begin_layout Enumerate
+מכיוון ש 
+\begin_inset Formula $x\rightarrow\infty$
+\end_inset
+
+, נוכל לדרוש ש 
+\begin_inset Formula $x>1$
+\end_inset
+
+ )מההגדרה(.
+ לכן 
+\begin_inset Formula $\lfloor x\rfloor\ge1$
+\end_inset
+
+ כלומר 
+\begin_inset Formula $\text{\ensuremath{\lfloor x\rfloor\in\mathbb{N}}}$
+\end_inset
+
+ ונוכל לומר ש:
+\begin_inset Formula 
+\[
+1+2+\ldots+\lfloor x\rfloor=\frac{\lfloor x\rfloor\left(\lfloor x\rfloor+1\right)}{2}
+\]
+
+\end_inset
+
+נחלק ב 
+\begin_inset Formula $x^{2}\ne0$
+\end_inset
+
+ ונקבל:
+\begin_inset Formula 
+\[
+\frac{1}{x^{2}}+\frac{2}{x^{2}}+\ldots+\frac{\lfloor x\rfloor}{x^{2}}=\frac{\lfloor x\rfloor\left(\lfloor x\rfloor+1\right)}{2x^{2}},\;\;\forall x>1
+\]
+
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+הוכחנו בעבר ש:
+\begin_inset Formula 
+\[
+\left(*\right)\;\;x-1\le\lfloor x\rfloor\le x
+\]
+
+\end_inset
+
+נכפיל את אי השוויון ב 
+\begin_inset Formula $\frac{\lfloor x\rfloor+1}{2x^{2}}$
+\end_inset
+
+.
+ הביטוי חיובי ולכן אי השוויון נשמר.
+ נקבל:
+\begin_inset Formula 
+\[
+\frac{x-1}{2x}=\frac{\left(x-1\right)\cancel{x}}{2x^{\cancel{2}}}\underset{x>1,*}{\le}\frac{\left(x-1\right)\left(\lfloor x\rfloor+1\right)}{2x^{2}}\underset{*}{\le}\ub{\frac{\lfloor x\rfloor\left(\lfloor x\rfloor+1\right)}{2x^{2}}}\underset{*}{\le}\frac{\cancel{x}\left(\lfloor x\rfloor+1\right)}{2x^{\cancel{2}}}\underset{*}{\le}\frac{x+1}{2x}
+\]
+
+\end_inset
+
+הגבול הימני
+\begin_inset Formula 
+\[
+\limto{\infty}\frac{x+1}{2x}=\limto{\infty}\frac{1+\frac{1}{x}}{2}\aol\frac{1}{2}
+\]
+
+\end_inset
+
+הגבול השמאלי
+\begin_inset Formula 
+\[
+\limto{\infty}\frac{x-1}{2x}=\limto{\infty}\frac{1-\frac{1}{x}}{2}\aol\frac{1}{2}
+\]
+
+\end_inset
+
+לכן לפי סנדוויץ':
+\begin_inset Formula 
+\[
+\limto{\infty}\left(\frac{1}{x^{2}}+\frac{2}{x^{2}}+\ldots+\frac{\lfloor x\rfloor}{x^{2}}\right)=\limto{\infty}\frac{\lfloor x\rfloor\left(\lfloor x\rfloor+1\right)}{2x^{2}}=\frac{1}{2}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+סטודנט 
+\begin_inset Formula $A$
+\end_inset
+
+ השתמש בכללי האריתמטיקה של גבולות בצורה לא נכונה.
+ נשים לב שמספר המחוברים תלוי ב 
+\begin_inset Formula $x$
+\end_inset
+
+, כלומר כאשר 
+\begin_inset Formula $x\rightarrow\infty$
+\end_inset
+
+ מספר המחוברים גם שואף לאינסוף ולפיכך אי אפשר להשתמש באריתמטיקה של גבולות
+ אינסוף פעמים, שהרי אינסוף הוא לא מספר.
+ בנוסף, לא דיברנו על 
+\begin_inset Quotes eld
+\end_inset
+
+גבולות של אריתמטיקה של גבולות
+\begin_inset Quotes erd
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Section
+שאלה
+\family roman
+\series bold
+\shape up
+\size larger
+\emph off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+ 
+\family default
+\series default
+\shape default
+\size default
+\emph default
+\numeric on
+\bar default
+\strikeout default
+\xout default
+\uuline default
+\uwave default
+\noun default
+\color inherit
+3
+\numeric off
+.
+\end_layout
+
+\begin_layout Standard
+יהיו 
+\begin_inset Formula $a<b$
+\end_inset
+
+ ותהי 
+\begin_inset Formula $f:\left[a,b\right]\rightarrow\mathbb{R}$
+\end_inset
+
+ פונקציה עולה.
+\begin_inset Newline newline
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+מהיות 
+\begin_inset Formula $f$
+\end_inset
+
+ עולה ב
+\begin_inset Formula $\left[a,b\right]$
+\end_inset
+
+, לכל 
+\begin_inset Formula $x\in(a,b]\iff a<x\le b$
+\end_inset
+
+ מתקיים: 
+\begin_inset Formula 
+\[
+f\left(a\right)\le f\left(x\right)\le f\left(b\right)
+\]
+
+\end_inset
+
+כלומר הקבוצה 
+\begin_inset Formula $\left\{ f\left(x\right)\mid a<x\le b\right\} $
+\end_inset
+
+ חסומה מלרע ע
+\begin_inset Quotes erd
+\end_inset
+
+י 
+\begin_inset Formula $f\left(a\right)$
+\end_inset
+
+.
+ היא גם בוודאי לא ריקה ולכן לפי משפט החסם התחתון, קיים 
+\begin_inset Formula $\underline{s}\in\mathbb{R}$
+\end_inset
+
+ כך ש: 
+\begin_inset Formula 
+\[
+\underline{s}=\inf\left\{ f\left(x\right)\mid a<x\le b\right\} 
+\]
+
+\end_inset
+
+☺
+\begin_inset Newline newline
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+יהי 
+\begin_inset Formula $\varepsilon>0$
+\end_inset
+
+.
+ מהיות 
+\begin_inset Formula $\underline{s}$
+\end_inset
+
+ חסם תחתון של הקבוצה, אזי מתכונת האפסילון שלו, קיים 
+\begin_inset Formula $a<x_{1}\le b$
+\end_inset
+
+ כך ש 
+\begin_inset Formula $\underline{s}\le f\left(x_{1}\right)<\underline{s}+\boxed{\varepsilon}$
+\end_inset
+
+.
+ נבחר 
+\begin_inset Formula $0<\delta=\boxed{x_{1}-a}$
+\end_inset
+
+ כך שלכל 
+\begin_inset Formula $a<\ub x\ub <a+\delta=\ub{x_{1}}$
+\end_inset
+
+ מתקיים:
+\begin_inset Formula 
+\[
+\ub{\left|f\left(x\right)-\underline{s}\right|}\underset{f\left(x\right)\ge\underline{s}}{=}f\left(x\right)-\underline{s}\underset{x<x_{1}}{\le}f\left(x_{1}\right)-\underline{s}\ub <\ub{\varepsilon}
+\]
+
+\end_inset
+
+☺
+\begin_inset Newline newline
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+ניקח את הפונקציה:
+\begin_inset Formula 
+\[
+f\left(x\right)=\begin{cases}
+x & 1<x\le2\\
+0 & x=1
+\end{cases}
+\]
+
+\end_inset
+
+מתקיים ש 
+\begin_inset Formula $f:\left[1,2\right]\rightarrow\mathbb{R}$
+\end_inset
+
+ וכמו כן הפונקציה עולה בתחום זה.
+ בנוסף:
+\begin_inset Formula 
+\[
+\inf\left\{ f\left(x\right)\mid1\le x\le2\right\} =\min\left\{ f\left(x\right)\mid1\le x\le2\right\} =f\left(1\right)=0
+\]
+
+\end_inset
+
+אבל
+\begin_inset Formula 
+\[
+\limto{1^{+}}f\left(x\right)\underset{x>1}{=}\limto{1^{+}}x\aol1\ne0=\inf\left\{ f\left(x\right)\mid1\le x\le2\right\} 
+\]
+
+\end_inset
+
+כנדרש.
+\end_layout
+
+\begin_layout Section
+שאלה
+\family roman
+\series bold
+\shape up
+\size larger
+\emph off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+ 
+\family default
+\series default
+\shape default
+\size default
+\emph default
+\numeric on
+\bar default
+\strikeout default
+\xout default
+\uuline default
+\uwave default
+\noun default
+\color inherit
+4
+\numeric off
+.
+\end_layout
+
+\begin_layout Standard
+יהי 
+\begin_inset Formula $\varepsilon>0$
+\end_inset
+
+.
+ מהיות 
+\begin_inset Formula $\limto{x_{0}}h\left(x\right)=L$
+\end_inset
+
+, קיים 
+\begin_inset Formula $\delta_{1}$
+\end_inset
+
+ כך שלכל 
+\begin_inset Formula $0<\left|x-x_{0}\right|<\delta_{1}$
+\end_inset
+
+ מתקיים:
+\begin_inset Formula 
+\[
+\left(*\right)\left|h\left(x\right)-L\right|<\frac{\varepsilon}{2}\Rightarrow\ub{f\left(x\right)}\le h\left(x\right)\ub <\ub{L+\frac{\varepsilon}{2}}
+\]
+
+\end_inset
+
+וגם:
+\begin_inset Formula 
+\[
+\ub{L-\frac{\varepsilon}{2}}\ub <h\left(x\right)\le\ub{g\left(x\right)}
+\]
+
+\end_inset
+
+מהיות 
+\begin_inset Formula $\limto{x_{0}}\left[g\left(x\right)-f\left(x\right)\right]=0$
+\end_inset
+
+, קיים 
+\begin_inset Formula $\delta_{2}$
+\end_inset
+
+ כך שלכל 
+\begin_inset Formula $0<\left|x-x_{0}\right|<\delta_{2}$
+\end_inset
+
+ מתקיים:
+\begin_inset Formula 
+\[
+\left(**\right)\left|g\left(x\right)-f\left(x\right)\right|<\frac{\varepsilon}{2}\iff-\frac{\varepsilon}{2}<g\left(x\right)-f\left(x\right)<\frac{\varepsilon}{2}
+\]
+
+\end_inset
+
+ניקח 
+\begin_inset Formula $\delta=\min\left\{ \delta_{1},\delta_{2}\right\} $
+\end_inset
+
+ כך שלכל 
+\begin_inset Formula $0<\left|x-x_{0}\right|<\delta$
+\end_inset
+
+ מתקיים:
+\begin_inset Formula 
+\[
+\ub{L-\varepsilon}\underset{*}{<}g\left(x\right)-\frac{\varepsilon}{2}\underset{**}{<}\ub{f\left(x\right)}\le\ub{g\left(x\right)}\underset{**}{<}f\left(x\right)+\frac{\varepsilon}{2}\underset{*}{<}\ub{L+\varepsilon}
+\]
+
+\end_inset
+
+כלומר:
+\begin_inset Formula 
+\[
+\left|f\left(x\right)-L\right|<\varepsilon
+\]
+
+\end_inset
+
+וגם 
+\begin_inset Formula 
+\[
+\left|g\left(x\right)-L\right|<\varepsilon
+\]
+
+\end_inset
+
+ולכן:
+\begin_inset Formula 
+\[
+\limto{x_{0}}g\left(x\right)=\limto{x_{0}}f\left(x\right)=L
+\]
+
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+☺
+\end_layout
+
+\begin_layout Section
+שאלה
+\family roman
+\series bold
+\shape up
+\size larger
+\emph off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+ 
+\family default
+\series default
+\shape default
+\size default
+\emph default
+\numeric on
+\bar default
+\strikeout default
+\xout default
+\uuline default
+\uwave default
+\noun default
+\color inherit
+5
+\numeric off
+.
+\end_layout
+
+\begin_layout Enumerate
+
+\series bold
+טענה
+\series default
+: קיימת פונקציה 
+\begin_inset Formula $f:\mathbb{R\rightarrow R}$
+\end_inset
+
+ כך ש 
+\begin_inset Formula $\limto{\infty}\frac{f\left(x\right)}{x}=3$
+\end_inset
+
+ וגם 
+\begin_inset Formula $\limto{\infty}\frac{f\left(x\right)\cdot\sin\left(x\right)}{x^{2}}=6$
+\end_inset
+
+.
+\begin_inset Newline newline
+\end_inset
+
+
+\bar under
+הטענה לא נכונה
+\bar default
+.
+\begin_inset Newline newline
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+נניח בשלילה שקיימת פונקציה כזאת, לכן:
+\begin_inset Formula 
+\[
+\ub 6=\limto{\infty}\frac{f\left(x\right)\cdot\sin\left(x\right)}{x^{2}}\ub =\limto{\infty}\frac{f\left(x\right)}{x}\cdot\sin\left(x\right)\cdot\frac{1}{x}\underset{B\times V,AOL}{=}3\cdot0=\ub 0
+\]
+
+\end_inset
+
+סתירה.
+\begin_inset Newline newline
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+
+\series bold
+טענה
+\series default
+: תהיינה 
+\begin_inset Formula $f,g$
+\end_inset
+
+ פונקציות המוגדרות בסביבה מנוקבת של
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+ 
+\family default
+\series default
+\shape default
+\size default
+\emph default
+\numeric on
+\bar default
+\strikeout default
+\xout default
+\uuline default
+\uwave default
+\noun default
+\color inherit
+0
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\numeric off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+ 
+\family default
+\series default
+\shape default
+\size default
+\emph default
+\bar default
+\strikeout default
+\xout default
+\uuline default
+\uwave default
+\noun default
+\color inherit
+ונניח ש 
+\begin_inset Formula $xf\left(x\right)\le g\left(x\right)\le x$
+\end_inset
+
+ לכל 
+\begin_inset Formula $x$
+\end_inset
+
+ בסביבה זו.
+ אזי 
+\begin_inset Formula $\limto 0g\left(x\right)=0$
+\end_inset
+
+.
+\begin_inset Newline newline
+\end_inset
+
+
+\bar under
+הטענה לא נכונה
+\bar default
+.
+ דוגמא נגדית:
+\begin_inset Newline newline
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+נביט על הפונקציות 
+\begin_inset Formula $g\left(x\right)=-1$
+\end_inset
+
+, 
+\begin_inset Formula $f\left(x\right)=-\frac{1}{x}$
+\end_inset
+
+.
+ הן בוודאי מוגדרות בסביבה מנוקבת של
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+ 
+\family default
+\series default
+\shape default
+\size default
+\emph default
+\numeric on
+\bar default
+\strikeout default
+\xout default
+\uuline default
+\uwave default
+\noun default
+\color inherit
+0
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\numeric off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+ 
+\family default
+\series default
+\shape default
+\size default
+\emph default
+\bar default
+\strikeout default
+\xout default
+\uuline default
+\uwave default
+\noun default
+\color inherit
+ובסביבה זו מתקיים:
+\begin_inset Formula 
+\[
+\ub{xf\left(x\right)}=-\frac{1}{x}\cdot x\underset{x\ne0}{=}-1\le-1=\ub{g\left(x\right)}\underset{*}{\le}\ub x
+\]
+
+\end_inset
+
+* מכיוון שמדובר בסביבה מנוקבת של
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+ 
+\family default
+\series default
+\shape default
+\size default
+\emph default
+\numeric on
+\bar default
+\strikeout default
+\xout default
+\uuline default
+\uwave default
+\noun default
+\color inherit
+0
+\numeric off
+, מספיק 
+\begin_inset Formula $0<\delta<1$
+\end_inset
+
+ כך שאי השוויון יתקיים.
+ אבל:
+\begin_inset Formula 
+\[
+\limto 0g\left(x\right)=\limto 0-1\aol-1\ne0
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+
+\series bold
+טענה
+\series default
+: תהיינה 
+\begin_inset Formula $f,g$
+\end_inset
+
+ פונקציות המוגדרות בסביבה מנוקבת של 
+\begin_inset Formula $x_{0}\in\mathbb{R}$
+\end_inset
+
+.
+ אם 
+\begin_inset Formula $g\left(x\right)\ne0$
+\end_inset
+
+ לכל 
+\begin_inset Formula $x$
+\end_inset
+
+ בסביבה זו ו 
+\begin_inset Formula $\limto{x_{0}}\frac{f\left(x\right)}{g\left(x\right)}=1$
+\end_inset
+
+, אזי 
+\begin_inset Formula $\limto{x_{0}}\left[f\left(x\right)-g\left(x\right)\right]=0$
+\end_inset
+
+.
+\begin_inset Newline newline
+\end_inset
+
+
+\bar under
+הטענה לא נכונה
+\bar default
+.
+\begin_inset Newline newline
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+דוגמא נגדית - ניקח 
+\begin_inset Formula $f\left(x\right)=1+\frac{1}{x}$
+\end_inset
+
+ , 
+\begin_inset Formula $g\left(x\right)=\frac{1}{x}$
+\end_inset
+
+ בסביבה מנוקבת של 
+\begin_inset Formula $0$
+\end_inset
+
+.
+ מתקיים:
+\begin_inset Formula 
+\[
+\limto 0\frac{f\left(x\right)}{g\left(x\right)}=\limto 0\frac{1+\frac{1}{x}}{\frac{1}{x}}=\limto 0\frac{\frac{x+1}{x}}{\frac{1}{x}}=\limto 0\left(x+1\right)\aol1
+\]
+
+\end_inset
+
+כנדרש, אבל:
+\begin_inset Formula 
+\[
+\limto 0\left[f\left(x\right)-g\left(x\right)\right]=\limto 0\left[1+\frac{1}{x}-\frac{1}{x}\right]=\limto 01\aol1\ne0
+\]
+
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+
+\series bold
+טענה
+\series default
+: תהיינה 
+\begin_inset Formula $f,g$
+\end_inset
+
+ פונקציות המוגדרות בתחום 
+\begin_inset Formula $[a,\infty)$
+\end_inset
+
+ כאשר 
+\begin_inset Formula $a\in\mathbb{R}$
+\end_inset
+
+.
+\begin_inset Newline newline
+\end_inset
+
+אם 
+\begin_inset Formula $\limto{\infty}\left[f\left(x\right)\cdot g\left(x\right)\right]=\infty$
+\end_inset
+
+, אזי 
+\begin_inset Formula $\limto{\infty}\left|f\left(x\right)\right|=\infty$
+\end_inset
+
+ או 
+\begin_inset Formula $\limto{\infty}\left|g\left(x\right)\right|=\infty$
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+
+\bar under
+הטענה נכונה
+\bar default
+
+\begin_inset Newline newline
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+נניח בשלילה ש 
+\begin_inset Formula $\limto{\infty}\left|f\left(x\right)\right|\ne\infty$
+\end_inset
+
+ 
+\bar under
+וגם
+\bar default
+ 
+\begin_inset Formula $\limto{\infty}\left|g\left(x\right)\right|\ne\infty$
+\end_inset
+
+.
+ לכן קיים 
+\begin_inset Formula $0<K_{1}$
+\end_inset
+
+ כך שלכל 
+\begin_inset Formula $M>0$
+\end_inset
+
+ קיים 
+\begin_inset Formula $x>M$
+\end_inset
+
+ כך ש:
+\begin_inset Formula 
+\[
+\left|f\left(x\right)\right|\le K_{1}
+\]
+
+\end_inset
+
+בנוסף, קיים 
+\begin_inset Formula $0<K_{2}$
+\end_inset
+
+ כך שלכל 
+\begin_inset Formula $M>0$
+\end_inset
+
+ קיים 
+\begin_inset Formula $x>M$
+\end_inset
+
+ כך ש:
+\begin_inset Formula 
+\[
+\left|g\left(x\right)\right|\le K_{2}
+\]
+
+\end_inset
+
+ניקח 
+\begin_inset Formula $K=\max\left\{ K_{1},K_{2}\right\} $
+\end_inset
+
+ כך שלכל 
+\begin_inset Formula $M>0$
+\end_inset
+
+ קיים 
+\begin_inset Formula $x>M$
+\end_inset
+
+ כך ששני התנאים לעיל מתקיימים.
+ נשים לב שכל האגפים חיוביים ולכן נוכל לכפול את אי שוויונים ולקבל:
+\begin_inset Formula 
+\[
+\left|f\left(x\right)\right|\cdot\left|g\left(x\right)\right|\le K^{2}
+\]
+
+\end_inset
+
+וזו סתירה לנתון ש 
+\begin_inset Formula $\limto{\infty}\left[f\left(x\right)\cdot g\left(x\right)\right]=\infty$
+\end_inset
+
+.
+\begin_inset Newline newline
+\end_inset
+
+הסבר - מהיות 
+\begin_inset Formula $\limto{\infty}\left[f\left(x\right)\cdot g\left(x\right)\right]=\infty$
+\end_inset
+
+, 
+\bar under
+קיים
+\bar default
+ 
+\begin_inset Formula $M>0$
+\end_inset
+
+ כך שלכל 
+\begin_inset Formula $x>M$
+\end_inset
+
+ מתקיים:
+\begin_inset Formula 
+\[
+\ub{\left|f\left(x\right)\right|\cdot\left|g\left(x\right)\right|}=\left|f\left(x\right)\cdot g\left(x\right)\right|\underset{K>0}{=}f\left(x\right)\cdot g\left(x\right)\ub >K^{2}
+\]
+
+\end_inset
+
+☺
+\end_layout
+
+\end_body
+\end_document
