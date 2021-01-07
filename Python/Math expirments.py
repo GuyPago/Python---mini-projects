@@ -1,21 +1,14 @@
-def is_pangram(x):
-    abc = {}
-    for i in x.replace(' ', ''):
-        abc[i.lower()] = abc.get(i.lower(), True)
+class car:
+    def __init__(self, color, km):
+        self.color = color
+        self.km = km
 
-    print(abc)
-    print(len(abc))
-
-    return len(abc) == 26
+    def color_km(self):
+        pass
 
 
-def best_judge(lst):
-    j2s = {}
-    for tup in lst:
-        j2s[tup[1]] = j2s.get(tup[1], 0) + 1
-    return max(j2s, key=j2s.get)
+blue_car = ca3r('blue', 20000)
+red_car = car('red', 30000)
 
-
-print(best_judge([('avi', 'geffen'), ('benny', 'shlomi'), ('david', 'shlomi')]))
-
-print(is_pangram("The quick brown fox jumps over the lazy dog"))
+print(f'The {blue_car.color} car has {blue_car.km} kms')
+print(f'The {red_car.color} car has {red_car.km} kms')
