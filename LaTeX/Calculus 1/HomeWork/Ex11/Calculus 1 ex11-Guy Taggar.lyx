@@ -1,0 +1,1714 @@
+#LyX 2.3 created this file. For more info see http://www.lyx.org/
+\lyxformat 544
+\begin_document
+\begin_header
+\save_transient_properties true
+\origin unavailable
+\textclass heb-article
+\begin_preamble
+\usepackage{culmus}
+\end_preamble
+\use_default_options true
+\maintain_unincluded_children false
+\language hebrew
+\language_package default
+\inputencoding auto
+\fontencoding global
+\font_roman "default" "default"
+\font_sans "default" "default"
+\font_typewriter "default" "default"
+\font_math "auto" "auto"
+\font_default_family default
+\use_non_tex_fonts false
+\font_sc false
+\font_osf false
+\font_sf_scale 100 100
+\font_tt_scale 100 100
+\use_microtype false
+\use_dash_ligatures true
+\graphics default
+\default_output_format default
+\output_sync 0
+\bibtex_command default
+\index_command default
+\paperfontsize default
+\spacing single
+\use_hyperref false
+\papersize default
+\use_geometry false
+\use_package amsmath 1
+\use_package amssymb 1
+\use_package cancel 1
+\use_package esint 1
+\use_package mathdots 1
+\use_package mathtools 1
+\use_package mhchem 1
+\use_package stackrel 1
+\use_package stmaryrd 1
+\use_package undertilde 1
+\cite_engine basic
+\cite_engine_type default
+\biblio_style plain
+\use_bibtopic false
+\use_indices false
+\paperorientation portrait
+\suppress_date true
+\justification true
+\use_refstyle 1
+\use_minted 0
+\index Index
+\shortcut idx
+\color #008000
+\end_index
+\secnumdepth 3
+\tocdepth 3
+\paragraph_separation indent
+\paragraph_indentation default
+\is_math_indent 0
+\math_numbering_side default
+\quotes_style english
+\dynamic_quotes 0
+\papercolumns 1
+\papersides 1
+\paperpagestyle default
+\tracking_changes false
+\output_changes false
+\html_math_output 0
+\html_css_as_file 0
+\html_be_strict false
+\end_header
+
+\begin_body
+
+\begin_layout Standard
+\begin_inset FormulaMacro
+\newcommand{\ub}[1]{\underbrace{#1}}
+{\underbrace{#1}}
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset FormulaMacro
+\newcommand{\ua}[1]{\underset{#1}{\Rightarrow}}
+{\underset{#1}{\Rightarrow}}
+\end_inset
+
+
+\begin_inset FormulaMacro
+\newcommand{\limto}[1]{\underset{x\rightarrow#1}{\lim}}
+{\underset{x\rightarrow#1}{\lim}}
+\end_inset
+
+
+\begin_inset FormulaMacro
+\newcommand{\aol}[1]{\underset{AO#1}{=}}
+{\underset{AO#1}{=}}
+\end_inset
+
+
+\begin_inset FormulaMacro
+\newcommand{\limfto}[2]{\underset{#1\rightarrow#2}{\lim}}
+{\underset{#1\rightarrow#2}{\lim}}
+\end_inset
+
+
+\end_layout
+
+\begin_layout Title
+חשבון אינפיניטסימלי
+\family roman
+\series medium
+\shape up
+\size largest
+\emph off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+ 
+\family default
+\series default
+\shape default
+\size default
+\emph default
+\numeric on
+\bar default
+\strikeout default
+\xout default
+\uuline default
+\uwave default
+\noun default
+\color inherit
+1
+\family roman
+\series medium
+\shape up
+\size largest
+\emph off
+\numeric off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+ - תרגיל 
+\family default
+\series default
+\shape default
+\size default
+\emph default
+\bar default
+\strikeout default
+\xout default
+\uuline default
+\uwave default
+\noun default
+\color inherit
+\lang english
+11
+\end_layout
+
+\begin_layout Author
+גיא תגר
+\family roman
+\series medium
+\shape up
+\size large
+\emph off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+ 
+\family default
+\series default
+\shape default
+\size default
+\emph default
+\numeric on
+\bar default
+\strikeout default
+\xout default
+\uuline default
+\uwave default
+\noun default
+\color inherit
+206260762
+\family roman
+\series medium
+\shape up
+\size large
+\emph off
+\numeric off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+ 
+\family default
+\series default
+\shape default
+\size default
+\emph default
+\bar default
+\strikeout default
+\xout default
+\uuline default
+\uwave default
+\noun default
+\color inherit
+- קבוצה
+\family roman
+\series medium
+\shape up
+\size large
+\emph off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+ 
+\family default
+\series default
+\shape default
+\size default
+\emph default
+\numeric on
+\bar default
+\strikeout default
+\xout default
+\uuline default
+\uwave default
+\noun default
+\color inherit
+2
+\end_layout
+
+\begin_layout Section
+שאלה
+\family roman
+\series bold
+\shape up
+\size larger
+\emph off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+ 
+\family default
+\series default
+\shape default
+\size default
+\emph default
+\numeric on
+\bar default
+\strikeout default
+\xout default
+\uuline default
+\uwave default
+\noun default
+\color inherit
+1
+\numeric off
+.
+\end_layout
+
+\begin_layout Standard
+ניקח את הפונקציה 
+\begin_inset Formula $f\left(x\right)=\arccos\left(x\right)$
+\end_inset
+
+ לכל 
+\begin_inset Formula $x\in\left[-1,1\right]$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+נגדיר 
+\begin_inset Formula $y=g\left(x\right)=\cos x$
+\end_inset
+
+ לכל 
+\begin_inset Formula $0<x<\pi$
+\end_inset
+
+.
+\begin_inset Newline newline
+\end_inset
+
+ראינו ש-
+\begin_inset Formula $g$
+\end_inset
+
+ גזירה ו 
+\begin_inset Formula $g'\left(x\right)=-\sin x\ne0$
+\end_inset
+
+ לכל 
+\begin_inset Formula $0<x<\pi$
+\end_inset
+
+.
+\begin_inset Newline newline
+\end_inset
+
+בנוסף 
+\begin_inset Formula $g$
+\end_inset
+
+ הפיכה ומתקיים 
+\begin_inset Formula $x=g^{-1}\left(y\right)=\arccos\left(y\right)$
+\end_inset
+
+ לכל 
+\begin_inset Formula $y\in\left(-1,1\right)$
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+נשים לב ש 
+\begin_inset Formula $g^{-1}$
+\end_inset
+
+ רציפה מאש
+\begin_inset Quotes erd
+\end_inset
+
+ר בסיס ולכן:
+\begin_inset Formula 
+\[
+\left(\arccos y\right)'=\frac{1}{g'\left(x\right)}=-\frac{1}{\sin x}\underset{\sin x>0}{=}-\frac{1}{\sqrt{1-\cos^{2}x}}=
+\]
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+-\frac{1}{\sqrt{1-\left(\cos\left(\arccos y\right)\right)^{2}}}=-\frac{1}{\sqrt{1-y^{2}}}
+\]
+
+\end_inset
+
+ ולכן:
+\begin_inset Formula 
+\[
+\left(\arccos x\right)'=-\frac{1}{\sqrt{1-x^{2}}},\;\;\forall x\in\left(-1,1\right)
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+נבדוק גזירות בקצוות.
+ עבור 
+\begin_inset Formula $x=1$
+\end_inset
+
+:
+\begin_inset Formula 
+\[
+\limto{1^{-}}\frac{\arccos x-\arccos1}{x-1}=\limto{1^{-}}\frac{\arccos x}{x-1}\underset{t=\arccos x}{=}\underset{t\rightarrow0^{+}}{\lim}\frac{t}{\cos t-1}=
+\]
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+\underset{t\rightarrow0^{+}}{\lim}\frac{1}{\frac{\cos t-1}{t^{2}}}\cdot\frac{1}{t}\aol L-2\cdot\infty=-\infty
+\]
+
+\end_inset
+
+ עבור 
+\begin_inset Formula $x=-1$
+\end_inset
+
+:
+\begin_inset Formula 
+\[
+\limto{-1^{+}}\frac{\arccos x-\arccos\left(-1\right)}{x+1}=\limto{-1^{+}}\frac{\arccos x-\pi}{x+1}\underset{t=\arccos x}{=}
+\]
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+\underset{t\rightarrow\pi^{-}}{\lim}\frac{t-\pi}{\cos t+1}\underset{u=t-\pi}{=}\underset{u\rightarrow0^{-}}{\lim}\frac{u}{\cos\left(u+\pi\right)+1}=\underset{u\rightarrow0^{-}}{\lim}-\frac{u}{\cos\left(u\right)-1}=
+\]
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+\underset{u\rightarrow0^{-}}{\lim}-\frac{1}{\frac{\cos u-1}{u^{2}}}\cdot\frac{1}{u}\aol L\cdot2-\infty=-\infty
+\]
+
+\end_inset
+
+הגבול לא קיים, לכן 
+\begin_inset Formula $\arccos x$
+\end_inset
+
+ לא גזירה בנקודה 
+\begin_inset Formula $1,-1$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section
+שאלה
+\family roman
+\series bold
+\shape up
+\size larger
+\emph off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+ 
+\family default
+\series default
+\shape default
+\size default
+\emph default
+\numeric on
+\bar default
+\strikeout default
+\xout default
+\uuline default
+\uwave default
+\noun default
+\color inherit
+2
+\numeric off
+.
+\end_layout
+
+\begin_layout Standard
+נשים לב שלכל 
+\begin_inset Formula $x>1$
+\end_inset
+
+ מתקיים 
+\begin_inset Formula $\ln x>0$
+\end_inset
+
+.
+ נגזור לפי אשג
+\begin_inset Quotes erd
+\end_inset
+
+ז:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+\left[\left(x\ln x\right)^{\ln x}\right]'=\left[e^{\ln x\cdot\ln\left(x\ln x\right)}\right]'=
+\]
+
+\end_inset
+
+ 
+\begin_inset Formula 
+\[
+e^{\ln x\cdot\ln\left(x\ln x\right)}\left(\frac{\ln\left(x\ln x\right)}{x}+\frac{\cancel{\ln x}}{x\cancel{\ln x}}\left(\frac{1}{x}\cdot x+1\cdot\ln x\right)\right)=
+\]
+
+\end_inset
+
+ 
+\begin_inset Formula 
+\[
+e^{\ln x\cdot\ln\left(x\ln x\right)}\left(\frac{\ln\left(x\ln x\right)+\ln x+1}{x}\right)=\left(x\ln x\right)^{\ln x}\left(\frac{\ln\left(x^{2}\ln x\right)+1}{x}\right)
+\]
+
+\end_inset
+
+ הנגזרת מוגדרת לכל 
+\begin_inset Formula $x>1$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Section
+שאלה
+\family roman
+\series bold
+\shape up
+\size larger
+\emph off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+ 
+\family default
+\series default
+\shape default
+\size default
+\emph default
+\numeric on
+\bar default
+\strikeout default
+\xout default
+\uuline default
+\uwave default
+\noun default
+\color inherit
+3
+\numeric off
+.
+\end_layout
+
+\begin_layout Enumerate
+נחשב את הגבול:
+\begin_inset Formula 
+\[
+\limto{-\infty}g\left(x\right)\underset{t=-x}{=}\underset{t\rightarrow\infty}{\lim}g\left(-t\right)\underset{odd}{=}\underset{t\rightarrow\infty}{\lim}-g\left(t\right)\aol L-L
+\]
+
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+נשים לב - 
+\begin_inset Formula $g$
+\end_inset
+
+ גזירה מאשג
+\begin_inset Quotes erd
+\end_inset
+
+ז ולכן בפרט רציפה.
+ בנוסף:
+\begin_inset Formula 
+\[
+g\left(-x\right)=f\left(-x\right)-f\left(x\right)=-\left[f\left(x\right)-f\left(-x\right)\right]=-g\left(x\right)
+\]
+
+\end_inset
+
+כלומר 
+\begin_inset Formula $g$
+\end_inset
+
+ אי זוגית.
+ לכן מסעיף
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+ 
+\family default
+\series default
+\shape default
+\size default
+\emph default
+\numeric on
+\bar default
+\strikeout default
+\xout default
+\uuline default
+\uwave default
+\noun default
+\color inherit
+1
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\numeric off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+ 
+\family default
+\series default
+\shape default
+\size default
+\emph default
+\bar default
+\strikeout default
+\xout default
+\uuline default
+\uwave default
+\noun default
+\color inherit
+מתקיים:
+\begin_inset Formula 
+\[
+\limto{-\infty}g\left(x\right)=-0=0
+\]
+
+\end_inset
+
+מש
+\begin_inset Quotes erd
+\end_inset
+
+ב
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+ 
+\family default
+\series default
+\shape default
+\size default
+\emph default
+\numeric on
+\bar default
+\strikeout default
+\xout default
+\uuline default
+\uwave default
+\noun default
+\color inherit
+10
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\numeric off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+ 
+\family default
+\series default
+\shape default
+\size default
+\emph default
+\bar default
+\strikeout default
+\xout default
+\uuline default
+\uwave default
+\noun default
+\color inherit
+שאלה
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+ 
+\family default
+\series default
+\shape default
+\size default
+\emph default
+\numeric on
+\bar default
+\strikeout default
+\xout default
+\uuline default
+\uwave default
+\noun default
+\color inherit
+5
+\numeric off
+.ב, קיימת 
+\begin_inset Formula $x_{0}\in\mathbb{R}$
+\end_inset
+
+ כך ש 
+\begin_inset Formula $x_{0}$
+\end_inset
+
+ היא נקודת קיצון.
+\begin_inset Newline newline
+\end_inset
+
+
+\begin_inset Formula $g$
+\end_inset
+
+ גזירה בפרט ב-
+\begin_inset Formula $x_{0}$
+\end_inset
+
+.
+ היא בוודאי לא נקודת קצה מכיוון שהתחום הוא 
+\begin_inset Formula $\mathbb{R}$
+\end_inset
+
+.
+ לכן לפי משפט פרמה, מתקיים:
+\begin_inset Formula 
+\[
+g'\left(x_{0}\right)=0
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+נשים לב שלכל 
+\begin_inset Formula $x\in\mathbb{R}$
+\end_inset
+
+:
+\begin_inset Formula 
+\[
+\ub{g'\left(x\right)}=\left[f\left(x\right)-f\left(-x\right)\right]'\aol Df'\left(x\right)-f'\left(-x\right)\underset{\left(*\right)}{=}
+\]
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+f'\left(x\right)-f'\left(x\right)\cdot\left(-1\right)=\ub{2f'\left(x\right)}
+\]
+
+\end_inset
+
+ 
+\begin_inset Formula $\left(*\right)$
+\end_inset
+
+ כלל השרשרת
+\begin_inset Newline newline
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+עבור 
+\begin_inset Formula $x_{0}$
+\end_inset
+
+ מתקיים:
+\begin_inset Formula 
+\[
+0=g'\left(x_{0}\right)=2f'\left(x_{0}\right)\Rightarrow
+\]
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+f'\left(x_{0}\right)=0
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section
+שאלה
+\family roman
+\series bold
+\shape up
+\size larger
+\emph off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+ 
+\family default
+\series default
+\shape default
+\size default
+\emph default
+\numeric on
+\bar default
+\strikeout default
+\xout default
+\uuline default
+\uwave default
+\noun default
+\color inherit
+4
+\numeric off
+.
+\end_layout
+
+\begin_layout Enumerate
+
+\series bold
+טענה
+\series default
+: תהי 
+\begin_inset Formula $f:\left[a,b\right]\rightarrow\mathbb{R}$
+\end_inset
+
+.
+ נניח ש 
+\begin_inset Formula $b$
+\end_inset
+
+ היא מינימום של 
+\begin_inset Formula $f$
+\end_inset
+
+ ב
+\begin_inset Formula $\left[a,b\right]$
+\end_inset
+
+ וש 
+\begin_inset Formula $f$
+\end_inset
+
+ גזירה בנקודה 
+\begin_inset Formula $b$
+\end_inset
+
+.
+ אזי 
+\begin_inset Formula $f'\left(b\right)\le0$
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+
+\bar under
+הטענה נכונה
+\bar default
+.
+\begin_inset Newline newline
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+מהיות 
+\begin_inset Formula $b$
+\end_inset
+
+ נקודת מינימום של 
+\begin_inset Formula $f$
+\end_inset
+
+ ב
+\begin_inset Formula $\left[a,b\right]$
+\end_inset
+
+, מתקיים:
+\begin_inset Formula 
+\[
+f\left(b\right)\le f\left(x\right)\;\;\forall x\in\left[a,b\right]
+\]
+
+\end_inset
+
+לפיכך לכל 
+\begin_inset Formula $x\in[a,b)$
+\end_inset
+
+ מתקיים:
+\begin_inset Formula 
+\[
+\frac{f\left(x\right)-f\left(b\right)}{x-b}\le0
+\]
+
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+מהיות 
+\begin_inset Formula $f$
+\end_inset
+
+ גזירה בנקודה 
+\series bold
+
+\begin_inset Formula $b$
+\end_inset
+
+
+\series default
+, מתקיים:
+\begin_inset Formula 
+\[
+f'\left(b\right)=\limto{b^{-}}\frac{f\left(x\right)-f\left(b\right)}{x-b}\underset{\left(*\right)}{\le}0
+\]
+
+\end_inset
+
+ 
+\begin_inset Formula $\left(*\right)$
+\end_inset
+
+ ממונוטוניות הגבול.
+\begin_inset Newline newline
+\end_inset
+
+
+\begin_inset Formula $\smiley$
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+
+\series bold
+טענה
+\series default
+: תהי 
+\begin_inset Formula $f:\mathbb{R\rightarrow R}$
+\end_inset
+
+ מוגדרת ע
+\begin_inset Quotes erd
+\end_inset
+
+י:
+\begin_inset Formula 
+\[
+f\left(x\right)=\begin{cases}
+x^{\frac{3}{2}}\sin\left(\frac{1}{x}\right) & x>0\\
+0 & x\le0
+\end{cases}
+\]
+
+\end_inset
+
+אזי 
+\begin_inset Formula $f'$
+\end_inset
+
+ רציפה.
+\begin_inset Newline newline
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+
+\bar under
+הטענה לא נכונה
+\bar default
+.
+\begin_inset Newline newline
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+ראינו בתרגול כי:
+\begin_inset Formula 
+\[
+f'\left(x\right)=\begin{cases}
+\frac{3}{2}\sqrt{x}\sin\left(\frac{1}{x}\right)-\frac{\cos\left(\frac{1}{x}\right)}{\sqrt{x}} & x>0\\
+0 & x\le0
+\end{cases}
+\]
+
+\end_inset
+
+עבור 
+\begin_inset Formula $x>0$
+\end_inset
+
+, 
+\begin_inset Formula $f'$
+\end_inset
+
+ רציפה מאשג
+\begin_inset Quotes erd
+\end_inset
+
+ז.
+\begin_inset Newline newline
+\end_inset
+
+עבור 
+\begin_inset Formula $x<0$
+\end_inset
+
+, 
+\begin_inset Formula $f'$
+\end_inset
+
+ רציפה מאשג
+\begin_inset Quotes erd
+\end_inset
+
+ז
+\begin_inset Newline newline
+\end_inset
+
+עבור 
+\begin_inset Formula $x_{0}=0$
+\end_inset
+
+ נבדוק בנפרד ונפצל את הגבול ל-
+\numeric on
+2
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\numeric off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+ 
+\family default
+\series default
+\shape default
+\size default
+\emph default
+\bar default
+\strikeout default
+\xout default
+\uuline default
+\uwave default
+\noun default
+\color inherit
+חלקים:
+\begin_inset Formula 
+\[
+\limto{0^{+}}\frac{3}{2}\sqrt{x}\sin\left(\frac{1}{x}\right)\underset{B\times V}{=}0
+\]
+
+\end_inset
+
+כעת נניח בשלילה ש 
+\begin_inset Formula $\limto{0^{+}}\frac{\cos\left(\frac{1}{x}\right)}{\sqrt{x}}$
+\end_inset
+
+ קיים.
+ לכן קיים 
+\begin_inset Formula $L\in\mathbb{R}$
+\end_inset
+
+ כך ש:
+\begin_inset Formula 
+\[
+\limto{0^{+}}\frac{\cos\left(\frac{1}{x}\right)}{\sqrt{x}}\underset{t=\frac{1}{x}}{=}\underset{t\rightarrow\infty}{\lim}\sqrt{t}\cos t\underset{u=t-\frac{\pi}{2}}{=}\underset{u\rightarrow\infty}{\lim}\sqrt{u+\frac{\pi}{2}}\cdot\sin u=L
+\]
+
+\end_inset
+
+לכן:
+\begin_inset Formula 
+\[
+\ub{\limto{\infty}\sin x}=\limto{\infty}\frac{\sin x\cdot\sqrt{x+\frac{\pi}{2}}}{\sqrt{x+\frac{\pi}{2}}}\aol L\cdot\frac{L}{\infty}=\ub 0
+\]
+
+\end_inset
+
+סתירה! הוכחנו בעבר שהגבול הזה לא קיים.
+\begin_inset Newline newline
+\end_inset
+
+לכן 
+\begin_inset Formula $\limto{0^{+}}\frac{\cos\left(\frac{1}{x}\right)}{\sqrt{x}}$
+\end_inset
+
+ לא קיים ולכן:
+\begin_inset Formula 
+\[
+\limto{0^{+}}f'\left(x\right)=\limto{0^{+}}\frac{3}{2}\sqrt{x}\sin\left(\frac{1}{x}\right)-\frac{\cos\left(\frac{1}{x}\right)}{\sqrt{x}}\underset{\left(*\right)}{=}DNE\ne0=f'\left(0\right)
+\]
+
+\end_inset
+
+
+\begin_inset Formula $\left(*\right)$
+\end_inset
+
+ קיים פחות לא קיים - לא קיים.
+\begin_inset Newline newline
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+ולכן 
+\begin_inset Formula $f'$
+\end_inset
+
+ אינה רציפה ב- 
+\begin_inset Formula $0$
+\end_inset
+
+.
+\begin_inset Newline newline
+\end_inset
+
+ 
+\end_layout
+
+\begin_layout Enumerate
+
+\series bold
+טענה
+\series default
+: קיימת פונקציה גזירה 
+\begin_inset Formula $f:\mathbb{R\rightarrow R}$
+\end_inset
+
+ כך ש:
+\begin_inset Formula 
+\[
+f'\left(x\right)=\begin{cases}
+\frac{\cos x-1}{x^{2}} & x\ne0\\
+1 & x=0
+\end{cases}
+\]
+
+\end_inset
+
+
+\bar under
+הטענה לא נכונה.
+\bar default
+
+\begin_inset Newline newline
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+נניח בשלילה שקיימת פונקציה כזו.
+ לכן:
+\begin_inset Formula 
+\[
+f'\left(0\right)=1
+\]
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+f'\left(2\pi\right)=0
+\]
+
+\end_inset
+
+לפי משפט דרבו המורחב, קיימת 
+\begin_inset Formula $0<c<2\pi$
+\end_inset
+
+ כך ש:
+\begin_inset Formula 
+\[
+f'\left(c\right)=\frac{1}{2}
+\]
+
+\end_inset
+
+כלומר:
+\begin_inset Formula 
+\[
+f'\left(c\right)=\frac{1}{2}=\frac{\cos c-1}{c^{2}}\Rightarrow
+\]
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+\cos c=1+\frac{c^{2}}{2}>1
+\]
+
+\end_inset
+
+סתירה!
+\begin_inset Newline newline
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+
+\series bold
+טענה
+\series default
+: תהי 
+\begin_inset Formula $f:\left(0,\infty\right)\rightarrow\mathbb{R}$
+\end_inset
+
+ פונקציה גזירה כך ש:
+\begin_inset Formula 
+\[
+f'\left(x\right)\cdot f'\left(\frac{1}{x}\right)<0\;\;\forall0<x\ne1
+\]
+
+\end_inset
+
+אזי 
+\begin_inset Formula $f'\left(1\right)=0$
+\end_inset
+
+.
+\begin_inset Newline newline
+\end_inset
+
+
+\bar under
+הטענה נכונה.
+\bar default
+
+\begin_inset Newline newline
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+נביט על הקטע 
+\begin_inset Formula $\left[\frac{1}{1.1},1.1\right]$
+\end_inset
+
+.
+ 
+\begin_inset Formula $f$
+\end_inset
+
+ גזירה בפרט בקטע זה.
+ בנוסף לפי הנתון:
+\begin_inset Formula 
+\[
+f'\left(\frac{1}{1.1}\right)\cdot f'\left(1.1\right)<0
+\]
+
+\end_inset
+
+ לכן לפי משפט דרבו, קיים 
+\begin_inset Formula $0.91\approx\frac{1}{1.1}<c<1.1$
+\end_inset
+
+ כך ש:
+\begin_inset Formula 
+\[
+f'\left(c\right)=0
+\]
+
+\end_inset
+
+ נניח בשלילה ש 
+\begin_inset Formula $f\left(c\right)\ne1$
+\end_inset
+
+.
+ אז לפי ההנחה:
+\begin_inset Formula 
+\[
+f'\left(c\right)\cdot f'\left(\frac{1}{c}\right)<0
+\]
+
+\end_inset
+
+ סתירה!
+\end_layout
+
+\begin_layout Enumerate
+
+\series bold
+טענה
+\series default
+: יהי 
+\begin_inset Formula $x_{0}\in\mathbb{R}$
+\end_inset
+
+ ותהי 
+\begin_inset Formula $f$
+\end_inset
+
+ פונקציה גזירה בקטע 
+\begin_inset Formula $\left(x_{0},b\right)$
+\end_inset
+
+ עבור 
+\begin_inset Formula $b>x_{0}$
+\end_inset
+
+ כלשהו.
+\begin_inset Newline newline
+\end_inset
+
+אם 
+\begin_inset Formula $\limto{x_{0}^{+}}=\infty$
+\end_inset
+
+ , אזי 
+\begin_inset Formula $\limto{x_{0}^{+}}f'\left(x\right)=-\infty$
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+
+\bar under
+הטענה לא נכונה.
+\bar default
+
+\begin_inset Newline newline
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+דוגמה נגדית - ניקח את הפונקציה:
+\begin_inset Formula 
+\[
+f\left(x\right)=\sin\left(\frac{1}{x+1}\right)+\frac{1}{x+1},\;\;\forall x\in\left(-1,0\right)
+\]
+
+\end_inset
+
+הפונקציה גזירה בקטע מאשג
+\begin_inset Quotes erd
+\end_inset
+
+ז.
+ נשים לב ש:
+\begin_inset Formula 
+\[
+\sin\left(\frac{1}{x+1}\right)+\frac{1}{x+1}\ge\frac{1}{x+1}-2
+\]
+
+\end_inset
+
+ 
+\begin_inset Formula 
+\[
+\limto{-1^{+}}\left[\frac{1}{x+1}-2\right]=\infty
+\]
+
+\end_inset
+
+ לכן לפי משפט הטוסט,
+\begin_inset Formula 
+\[
+\limto{-1^{+}}f\left(x\right)=\infty
+\]
+
+\end_inset
+
+ בנוסף: 
+\begin_inset Formula 
+\[
+f'\left(x\right)=\cos\left(\frac{1}{x+1}\right)\cdot\left(-\frac{1}{\left(x+1\right)^{2}}\right)-\frac{1}{\left(x+1\right)^{2}}=-\frac{1}{\left(x+1\right)^{2}}\cdot\left[1+\cos\left(\frac{1}{x+1}\right)\right]
+\]
+
+\end_inset
+
+נבדוק את הגבול של הנגזרת מימין ל
+\numeric on
+–1
+\numeric off
+:
+\begin_inset Formula 
+\[
+\limto{-1+}\left[-\frac{1}{\left(x+1\right)^{2}}\cdot\left[1+\cos\left(\frac{1}{x+1}\right)\right]\right]\underset{t=\frac{1}{x+1}}{=}\limfto t{\infty}-t^{2}\left(1+\cos t\right)
+\]
+
+\end_inset
+
+ נניח בשלילה ש 
+\begin_inset Formula $-\infty$
+\end_inset
+
+ =
+\begin_inset Formula $\limfto t{\infty}-t^{2}\left(1+\cos t\right)$
+\end_inset
+
+.
+ לכן קיים 
+\begin_inset Formula $M_{1}<0$
+\end_inset
+
+ כך שלכל 
+\begin_inset Formula $t<M_{1}$
+\end_inset
+
+ מתקיים:
+\begin_inset Formula 
+\[
+f\left(t\right)<\boxed{-1}
+\]
+
+\end_inset
+
+ נבחר 
+\begin_inset Formula $M_{1}>t_{1}=\lfloor M_{1}\rfloor\cdot2\pi$
+\end_inset
+
+.
+ לכן מתקיים:
+\begin_inset Formula 
+\[
+f\left(t_{1}\right)=-\left(\lfloor M_{1}\rfloor\cdot2\pi\right)^{2}\left(1+\cos\left(\lfloor M_{1}\rfloor\cdot2\pi\right)\right)=0>-1
+\]
+
+\end_inset
+
+ סתירה! 
+\end_layout
+
+\begin_layout Section
+שאלה
+\family roman
+\series bold
+\shape up
+\size larger
+\emph off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+ 
+\family default
+\series default
+\shape default
+\size default
+\emph default
+\numeric on
+\bar default
+\strikeout default
+\xout default
+\uuline default
+\uwave default
+\noun default
+\color inherit
+5
+\numeric off
+.
+\end_layout
+
+\begin_layout Standard
+תהי 
+\begin_inset Formula $f:\mathbb{R\rightarrow R}$
+\end_inset
+
+ פונקציה מחזורית וגזירה.
+\end_layout
+
+\begin_layout Enumerate
+:
+\begin_inset Formula 
+\[
+\ub{f'\left(T\right)}=\limto T\frac{f\left(x\right)-f\left(T\right)}{x-T}\underset{y=x-T}{=}\limfto y0\frac{f\left(y+T\right)-f\left(T+0\right)}{y}=
+\]
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+\limfto y0\frac{f\left(y\right)-f\left(0\right)}{y-0}=\ub{f'\left(0\right)}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+ראינו כבר ש 
+\begin_inset Formula $f'\left(T\right)=f'\left(0\right)$
+\end_inset
+
+.
+ לכן אם 
+\begin_inset Formula $f'\left(T\right)=f'\left(0\right)=0$
+\end_inset
+
+ , ניקח 
+\begin_inset Formula $x_{1}=0,\;x_{2}=T$
+\end_inset
+
+ וסיימנו.
+ אחרת, 
+\begin_inset Formula $f'\left(T\right)=f'\left(0\right)\ne0$
+\end_inset
+
+.
+ הפונקציה גזירה בפרט ב 
+\begin_inset Formula $\left(0,T\right)$
+\end_inset
+
+ ולכן לפי משפט רול, קיימת 
+\begin_inset Formula $0<x_{1}<T$
+\end_inset
+
+ כך ש:
+\begin_inset Formula 
+\[
+f'\left(x_{1}\right)=0
+\]
+
+\end_inset
+
+נשים לב כי 
+\begin_inset Formula $f\left(x_{1}\right)=f\left(x_{1}+T\right)$
+\end_inset
+
+.
+ נביט על הקטע 
+\begin_inset Formula $\left[x_{1},x_{1}+T\right]$
+\end_inset
+
+.
+ אותם התנאים חלים ולכן לפי משפט רול קיימת 
+\begin_inset Formula $x_{1}<x_{2}<x_{1}+T$
+\end_inset
+
+ כך ש:
+\begin_inset Formula 
+\[
+f'\left(x_{2}\right)=0
+\]
+
+\end_inset
+
+אם 
+\begin_inset Formula $x_{2}<T$
+\end_inset
+
+, אזי:
+\begin_inset Formula 
+\[
+0<x_{1}<x_{2}<T
+\]
+
+\end_inset
+
+וסיימנו.
+ אחרת 
+\begin_inset Formula $x_{2}>T$
+\end_inset
+
+ )לא ייתכן שוויון כי 
+\begin_inset Formula $f'\left(T\right)\ne0$
+\end_inset
+
+( ומתקיים:
+\begin_inset Formula 
+\[
+0<x_{2}-T<x_{1}
+\]
+
+\end_inset
+
+נבחר 
+\begin_inset Formula $x_{3}=x_{2}-T$
+\end_inset
+
+.
+ נראה ש 
+\begin_inset Formula $f'\left(x_{3}\right)=0$
+\end_inset
+
+ ונסיים:
+\begin_inset Formula 
+\[
+\limto{x_{2}-T}\frac{f\left(x\right)-f\left(x_{2}-T\right)}{x-x_{2}+T}\underset{y=x+T}{=}\limfto y{x_{2}}\frac{f\left(y-T\right)-f\left(x_{2}-T\right)}{y-T}=
+\]
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+\limfto y{x_{2}}\frac{f\left(y\right)-f\left(x_{2}\right)}{y-T}=f'\left(x_{2}\right)=0
+\]
+
+\end_inset
+
+בכל מקרה מצאנו 
+\begin_inset Formula $x_{3},x_{1}\in\left[0,T\right]$
+\end_inset
+
+ כך ש 
+\begin_inset Formula $f'\left(x_{1}\right)=f'\left(x_{3}\right)=0$
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+כנדרש.
+\begin_inset Newline newline
+\end_inset
+
+
+\begin_inset Formula $\smiley$
+\end_inset
+
+ 
+\end_layout
+
+\end_body
+\end_document

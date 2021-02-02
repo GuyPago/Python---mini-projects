@@ -31,7 +31,7 @@ def load_luna_park_data_to_arrays(csv_file):
 
     return rides_list, names_list, data_table
 
-
+rides_list, names_list, data_table = load_luna_park_data_to_arrays('luna_park.csv')
 #########################################
 # Question 2 - do not delete this comment
 #########################################
@@ -66,7 +66,6 @@ def no_use(data):
 def more_than_25(data):
     return np.sum(np.sum(data, axis=0) > 25)
 
-
 #########################################
 # Question 7 - do not delete this comment
 #########################################
@@ -91,7 +90,8 @@ def fix_last_kid(data):
     new_data[-1] += 5
     return new_data
 
-
+print(data_table)
+print(fix_last_kid(data_table))
 #########################################
 # Question 10 - do not delete this comment
 #########################################

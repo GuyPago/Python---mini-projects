@@ -19,7 +19,7 @@ def top_of_genre(in_file_name, out_file_name, genre):
             f1.write(first_line + final_line)
     return None
 
-
+top_of_genre('IMDB.csv','Gezza.csv','comedy')
 #########################################
 # Question 2 - do not delete this comment
 #########################################
