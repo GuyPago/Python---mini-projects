@@ -1,7 +1,0 @@
-# sound dept
-3\tStereo System
-1\tHeadphones
-# ski dept
-4\tK2 Helmet
-# sweets dept
-2\tKit Kat
